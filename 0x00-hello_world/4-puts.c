@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - Begin/Start point
+ * main - Beginning/Starting point
  *
  * Objectif: Print exactly "Programming is like building a multilingual puzzle
  *
