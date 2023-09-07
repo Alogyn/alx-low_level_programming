@@ -6,7 +6,7 @@
   * Objectif: Print exactly
   * with proper grammar, but the outcome is a piece of art,
   *
-  * Return: Always 0 (succes)
+  * Return: Always 0 (success)
   */
 
 int main(void)
