@@ -21,7 +21,7 @@ int main(void)
 	int i = 0;
 
 	/* Declaring the variable "j" with the value '0' */
-	int j = 0;
+	int j;
 
 	/* Get the first digit from 0 to 8 */
 	while (i <= 8)
@@ -32,6 +32,7 @@ int main(void)
 		{
 			putchar(i + '0');
 			putchar(j + '0');
+			/* if the i#8 ans j#9, print the ',' ans the space */
 			if (i != 8 || j != 9)
 			{
 				putchar(',');
