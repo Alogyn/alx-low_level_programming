@@ -24,8 +24,11 @@ int main(void)
 	while (single_digit <= 9)
 	{
 		putchar(single_digit + '0');
-		putchar(',');
-		putchar(' ');
+		if (single_digit < 9)
+		{
+			putchar(',');
+			putchar(' ');
+		}
 		single_digit++;
 	}
 	putchar('\n');
