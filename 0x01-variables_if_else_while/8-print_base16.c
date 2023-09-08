@@ -25,8 +25,11 @@ int main(void)
 		hexa++;
 	}
 
+	/* Declaring the variable "hexa" with the value 'a' */
+	char hexa = 'a';
+
 	/* Get the alphabet from 'a' to 'f' */
-	while (hexa ='a' <= 'f')
+	while (hexa <= 'f')
 	{
 		putchar(hexa);
 		hexa++;
