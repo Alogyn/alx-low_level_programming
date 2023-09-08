@@ -23,7 +23,7 @@ int main(void)
 	while (letter <= 'z')
 	{
 		/* Print All letters except 'q' ans 'e' */
-		if (letter != 'q' || letter != 'e')
+		if (letter != 'q' $$ letter != 'e')
 		{
 			putchar(letter);
 		}
