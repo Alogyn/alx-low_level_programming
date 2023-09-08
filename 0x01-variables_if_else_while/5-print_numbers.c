@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /*
- * Task 6. Numberz
+ * Task 5. Numbers
  */
 
 /**
