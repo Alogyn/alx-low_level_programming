@@ -18,6 +18,7 @@ int main(void)
 	/* Declaring the variable "number" with the value '0' */
 	int number = 0;
 
+	/* Print the numbers from 0 to 10 */
 	while (number < 10)
 	{
 		printf("%i", number);
