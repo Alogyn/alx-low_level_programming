@@ -23,7 +23,7 @@ int main(void)
 	/* Get numbers from 0 to 9 */
 	while (single_digit <= 9)
 	{
-		putchar('single_digit');
+		putchar(single_digit + '0');
 		putchar(',');
 		putchar(' ');
 		single_digit++;
