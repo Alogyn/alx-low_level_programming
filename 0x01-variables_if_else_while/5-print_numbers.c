@@ -20,7 +20,7 @@ int main(void)
 
 	while (number < 10)
 	{
-		printf(number);
+		printf("%i", number);
 		number++;
 	}
 	printf("\n");
