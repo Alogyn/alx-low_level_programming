@@ -16,15 +16,15 @@
 int main(void)
 {
 	/* Declaring the variable "single_digit" with the value '0' */
-	int single_digit = '0';
+	int singledigit = '0';
 
 	/* Get numbers from 0 to 9 */
-	while (single_digit <= '9')
+	while (singledigit <= '9')
 	{
-		putchar('single_digit');
+		putchar('singledigit');
 		putchar(',');
 		putchar(' ');
-		single_digit++;
+		singledigit++;
 	}
 	putchar('\n');
 	return (0);
