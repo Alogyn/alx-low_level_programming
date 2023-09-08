@@ -26,7 +26,7 @@ int main(void)
 	}
 
 	/* Get the alphabet from 'a' to 'f' */
-	while (hexa <= 'f')
+	while (hexa ='a' <= 'f')
 	{
 		putchar(hexa);
 		hexa++;
