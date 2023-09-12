@@ -34,7 +34,7 @@ void print_to_98(int n)
 			printf("%i, ", run);
 		}
 	}
-	if (n == 98)
+	if (ruu == 98)
 	{
 		printf("98\n");
 	}
