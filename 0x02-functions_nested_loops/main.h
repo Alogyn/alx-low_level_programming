@@ -15,5 +15,7 @@ int _isalpha(int c);
 int print_sign(int n);
 /* Task 6 */
 int _abs(int n);
+/* Task 7 */
+int print_last_digit(int n);
 
 #endif
