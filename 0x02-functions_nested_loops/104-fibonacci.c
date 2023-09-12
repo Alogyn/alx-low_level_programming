@@ -18,7 +18,7 @@
 
 int main(void)
 {
-	int n = 98;
+	int i, n = 98;
 	unsigned long int  fib1 = 1, fib2 = 2, next;
 
 	printf("%lu, %lu", fib1, fib2);
