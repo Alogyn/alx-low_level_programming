@@ -7,32 +7,6 @@
  * My teacher gave me an A+
  */
 
-/*
- * length - Get the length
- *
- * @num: Input number or argument
- *
- * Objectif: Handles unsigned long numbers
- *
- * return: 'a', number of digit
- */
-
-int length(unsigned long num)
-{
-	int a = 0;
-
-	if (!num)
-	{
-		return (1);
-	}
-	while (num)
-	{
-		num = num / 10;
-		a += 1;
-	}
-	return (a);
-}
-
 /**
   * main - Beginning/Starting point
   *
@@ -44,43 +18,29 @@ int length(unsigned long num)
 
 int main(void)
 {
-	int i, j;
-	unsigned long int fib1 = 1, fib2 = 2, sum;
-	unsigned long int fib1o = 0, fib2o = 0, sumo = 0;
-	unsigned long int mx = 1000000000000000000UL;
+	unsigned long int i, j = 1, a = 2, f1, f2, fib1, fib2;
 
-	for (i = 1; i <= 98; i++)
+	for (i = 1; i < 91; i++)
 	{
-		if (fib1o > 0)
-		{
-			printf("%lu", fib1o);
-		}
-		j = length(mx) - 1 - length(fib1);
-		while (fib1o > 0 && j > 0)
-		{
-			 printf("%d", 0);
-			 --j;
-		}
-		printf("%lu", fib1);
-		sum = fib1 + fib2;
-		if (sum >= mx)
-		{
-			sum -= mx;
-			sumo += 1;
-		}
-		fib1 = fib2;
-		fib1o = fib2o;
-		fib2 = sum;
-		fib2o = sumo;
-
-		if (i != 98)
-		{
-			printf(", ");
-		}
-		else
-		{
-			printf("\n");
-		}
+		printf(", %lu", a);
+		a = a + j;
+		j = a - j;
 	}
+
+	f1 = j / 1000000000;
+	f2 = j % 1000000000;
+	fib1 = a / 1000000000;
+	fib2 = a % 1000000000;
+
+	for (i = 92; i < 99; ++i)
+	{
+		printf(", %lu", fib1 + (fib2 / 1000000000));
+		printf("%lu", fib2 % 1000000000);
+		fib1 = fib1 + f1;
+		f1 = fib1 - f1;
+		fib2 = fib2 + f2;
+		f2 = fib2 - f2;
+	}
+	printf("\n");
 	return (0);
 }
