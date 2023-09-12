@@ -46,32 +46,32 @@ int main(void)
 {
 	int i, j;
 	unsigned long int fib1 = 1, fib2 = 2, sum;
-	unsigned long int f1o = 0, f2o = 0, sumo = 0;
+	unsigned long int fib1o = 0, fib2o = 0, sumo = 0;
 	unsigned long int mx = 1000000000000000000UL;
 
-	for (i = 1, i <= 98; i++)
+	for (i = 1; i <= 98; i++)
 	{
-		if (f1o > 0)
+		if (fib1o > 0)
 		{
-			printf("%lu", f1o);
+			printf("%lu", fib1o);
 		}
-		j = length(mx) - 1 - length(f1);
-		while (f1o > 0 && j > 0)
+		j = length(mx) - 1 - length(fib1);
+		while (fib1o > 0 && j > 0)
 		{
 			 printf("%d", 0);
 			 --j;
 		}
-		printf("%lu", f1);
-		sum = f1 + f2;
+		printf("%lu", fib1);
+		sum = fib1 + fib2;
 		if (sum >= mx)
 		{
 			sum -= mx;
 			sumo += 1;
 		}
-		f1 = f2;
-		f1o = f2o;
-		f2 = sum;
-		f2o = sumo;
+		fib1 = fib2;
+		fib1o = f2ibo;
+		fib2 = sum;
+		fib2o = sumo;
 
 		if (i != 98)
 		{
