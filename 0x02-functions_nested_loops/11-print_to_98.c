@@ -34,7 +34,7 @@ void print_to_98(int n)
 			printf("%i, ", run);
 		}
 	}
-	if (run == 98)
+	if (run == 98 || n == 98)
 	{
 		printf("98\n");
 	}
