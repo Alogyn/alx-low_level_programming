@@ -17,5 +17,7 @@ int print_sign(int n);
 int _abs(int n);
 /* Task 7 */
 int print_last_digit(int n);
+/* Task 8 */
+void jack_bauer(void);
 
 #endif
