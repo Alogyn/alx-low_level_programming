@@ -17,9 +17,12 @@ int main(void)
 {
 	/* Get and display every character of the word */
 	char display[] = "_putchar";
+	
+	/* Variable declaration */
+	int i;
 
 	/* Word character loop */
-	for (int i = 0; i < 8; i++)
+	for (i = 0; i < 8; i++)
 	{
 		_putchar(display[i]);
 	}
