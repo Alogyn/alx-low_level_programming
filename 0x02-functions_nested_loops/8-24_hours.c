@@ -14,7 +14,7 @@
   * Return: Empty
   */
 
-void jack_bauer(void);
+void jack_bauer(void)
 {
 	/* Variables Declaration */
 	int hour, minute;
