@@ -69,7 +69,7 @@ int main(void)
 			sumo += 1;
 		}
 		fib1 = fib2;
-		fib1o = f2ibo;
+		fib1o = fib2o;
 		fib2 = sum;
 		fib2o = sumo;
 
