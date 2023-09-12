@@ -8,6 +8,8 @@
 /**
   * print_last_digit - beginning/Starting point
   *
+  * @n: Input number or argument
+  *
   * Objectif: Print the last digit of a number
   *
   * Return: Last digit of 'n' value
@@ -23,8 +25,10 @@ int print_last_digit(int n)
 		last_digit = (n % 10) * -1;
 	}
 
-	else{
+	else
+	{
 		last_digit = n % 10;
 	}
+	_putchar(last_digit);
 	return (last_digit);
 }
