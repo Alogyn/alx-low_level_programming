@@ -16,31 +16,28 @@
   * Return: Always 0 (True)
   */
 
+#include <stdio.h>
+
 int main(void)
 {
-	unsigned long int i, j = 1, a = 2, f1, f2, fib1, fib2;
+	unsigned long int i, j = 1, a = 2, temp;
 
-	for (i = 1; i < 91; i++)
+	printf("%lu, %lu, ", j, a);
+
+	for (i = 3; i <= 98; i++)
 	{
-		printf(", %lu", a);
+		temp = a;
 		a = a + j;
-		j = a - j;
-	}
+		j = temp;
+		if (i != 98)
+		{
+			printf("%lu, ", a);
+		}
 
-	f1 = j / 1000000000;
-	f2 = j % 1000000000;
-	fib1 = a / 1000000000;
-	fib2 = a % 1000000000;
-
-	for (i = 92; i < 99; ++i)
-	{
-		printf(", %lu", fib1 + (fib2 / 1000000000));
-		printf("%lu", fib2 % 1000000000);
-		fib1 = fib1 + f1;
-		f1 = fib1 - f1;
-		fib2 = fib2 + f2;
-		f2 = fib2 - f2;
+		else
+		{
+			printf("%lu\n", a);
+		}
 	}
-	printf("\n");
 	return (0);
 }
