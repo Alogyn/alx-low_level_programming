@@ -16,28 +16,44 @@
   * Return: Always 0 (True)
   */
 
-#include <stdio.h>
-
 int main(void)
 {
-	unsigned long int i, j = 1, a = 2, temp;
+	int i;
+	unsigned long f1 = 0, f2 = 1, sum;
+	unsigned long fib11, fib12, fib21, fib22;
+	unsigned long fib10, fib20;
 
-	printf("%lu, %lu, ", j, a);
-
-	for (i = 3; i <= 98; i++)
+	for (i = 0; i < 92; i++)
 	{
-		temp = a;
-		a = a + j;
-		j = temp;
+		sum = f1 + f2;
+		printf("%lu, ", sum);
+		f1 = f2;
+		f2 = sum;
+	}
+	fib11 = f1 / 10000000000;
+	fib12 = f1 % 10000000000;
+	fib21 = f2 / 10000000000;
+	fib22 = f2 % 10000000000;
+
+	for (i = 93; i < 99; i++)
+	{
+		fib10 = fib11 + fib21;
+		fib20 = fib12 + fib22;
+		if (fib12 + fib22 > 9999999999)
+		{
+			fib10 += 1;
+			fib20 %= 10000000000;
+		}
+		printf("%lu%lu", fib10, fib20);
 		if (i != 98)
 		{
-			printf("%lu, ", a);
-		}
-
-		else
-		{
-			printf("%lu\n", a);
+			printf(", ");
+			fib11 = fib21;
+			fib12 = fib22;
+			fib21 = fib10;
+			fib22 = fib20;
 		}
 	}
+	printf("\n");
 	return (0);
 }
