@@ -22,7 +22,16 @@ void times_table(void)
 		for (m = 0; m < 10; m++)
 		{
 			result = n * m;
-			_putchar(result + '0');
+
+			if (result >= 10)
+			{
+				_putchar((result / 10) + '0');
+				_putchar((result % 10) + '0');
+			}
+			else
+			{
+				_putchar(result + '0');
+			}
 			/* ',' an space condition */
 			if (m < 9)
 			{
