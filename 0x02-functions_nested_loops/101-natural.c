@@ -8,7 +8,7 @@
 /**
   * main - Beginning/Starting point
   *
-  * Objectif: Compute and Print the sum of all the multiples
+  * Objectif: Compute and print the sum of all the multiples
   * of 3 or 5 below 1024 (excluded), followed by a new line
   *
   * Return: Always 0 (True);
@@ -22,7 +22,7 @@ int main(void)
 	{
 		if ((i % 3) == 0 || (i % 5) == 0)
 		{
-			sum += 1;
+			sum += i;
 		}
 	}
 	printf("%i\n", sum);
