@@ -19,13 +19,13 @@
 int main(void)
 {
 	int i, n = 98;
-	unsigned long int  fib1 = 1, fib2 = 2, next;
+	unsigned  int  fib1 = 1, fib2 = 2, next;
 
-	printf("%lu, %lu", fib1, fib2);
+	printf("%u, %u", fib1, fib2);
 	for (i = 2; i < n; i++)
 	{
 		next = fib1 + fib2;
-		printf(", %lu", next);
+		printf(", %u", next);
 		 fib1 = fib2;
 		 fib2 = next;
 	}
