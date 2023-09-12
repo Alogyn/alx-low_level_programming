@@ -17,8 +17,6 @@ int main(void)
 {
 	/* Get and display every character of the word */
 	char display[] = "_putchar";
-	
-	/* Variable declaration */
 	int i;
 
 	/* Word character loop */
