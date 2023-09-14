@@ -18,14 +18,14 @@
 int main(void)
 {
 	/* Variables declaration */
-	long long n = 612852475143;
-	long long lp, i;
+	long int n = 612852475143;
+	long int lp, i;
 
 	/* Divide the 'n' to the max times possible */
 	while (n % 2 == 0)
 	{
 		lp = 2;
-		number /= 2;
+		n /= 2;
 	}
 	/* Divide the 'n' by odd numbers starting from 3 */
 	for (i = 3; i <= n; i += 2)
@@ -36,6 +36,6 @@ int main(void)
 			n /= i;
 		}
 	}
-	printf("%lld\n", lp);
+	printf("%li\n", lp);
 	return (0);
 }
