@@ -5,10 +5,12 @@
 int _isupper(int c);
 /* Task 1 */
 int _isdigit(int c);
-/* Task 3 */
+/* Task 2 */
 int mul(int a, int b);
-/* Task 4 */
+/* Task 3 */
 void print_numbers(void);
 int _putchar(char c);
+/* Task 4 */
+void print_most_numbers(void);
 
 #endif
