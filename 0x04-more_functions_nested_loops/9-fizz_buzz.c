@@ -22,25 +22,25 @@ int main(void)
 
 	for (i = 1; i <= 100; i++)
 	{
-		if (i % 3 == 0 && i < 100)
+		if (i % 3 == 0)
 		{
-			printf("Fizz ");
+			printf("Fizz");
 		}
-		else if (i % 5 == 0 && i < 100)
+		else if (i % 5 == 0)
 		{
-			printf("Buzz ");
+			printf("Buzz");
 		}
 		else if ((i % 3 == 0) && (i % 5 == 5))
 		{
 			printf("FizzBuzz ");
 		}
-		else if (i == 100)
+		else
 		{
-			printf("Buzz");
+			printf("%i", i);
 		}
-		else if (i % 3 != 0 && i % 5 != 0 && i != 100)
+		if (i != 100)
 		{
-			printf("%i ", i);
+			printf(" ");
 		}
 	}
 	printf("\n");
