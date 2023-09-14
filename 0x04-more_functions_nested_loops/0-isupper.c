@@ -7,6 +7,8 @@
 /**
   * _isupper - Beginning/Starting point
   *
+  * @c: Input character or argument
+  *
   * Objectif: Check for uppercase character
   *
   * Return: 1 if character is 'Uppercase', else 0
