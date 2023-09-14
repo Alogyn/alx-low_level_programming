@@ -17,9 +17,6 @@
 
 void print_number(int n)
 {
-	/* Variable declaration */
-	int m;
-
 	/* When the number is negative */
 	if (n < 0)
 	{
