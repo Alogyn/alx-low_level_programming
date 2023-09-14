@@ -2,7 +2,7 @@
 
 /*
  * Task 0. isupper
-*/
+ */
 
 /**
   * _isupper - Beginning/Starting point
