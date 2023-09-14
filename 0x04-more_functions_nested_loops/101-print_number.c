@@ -17,19 +17,21 @@
 
 void print_number(int n)
 {
-	/* Variable declaration */
-	unsigned int m;
-
+	/* When the number equal to 0 */
+	if (n == 0)
+	{
+		_putchar('0');
+	}
 	/* When the number is negative */
 	if (n < 0)
 	{
 		_putchar('-');
-		m = -n;
+		n = -n;
 	}
 	/* When the number is positive */
-	if (m / 10)
+	if (n / 10 != 0)
 	{
-		print_number(m / 10);
+		print_number(n / 10);
 	}
-	_putchar((m % 10) + '0');
+	_putchar((n % 10) + '0');
 }
