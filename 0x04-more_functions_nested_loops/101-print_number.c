@@ -27,11 +27,10 @@ void print_number(int n)
 		n = -n;
 	}
 	/* When the number is positive */
-	if (n >= 10)
+	if (n / 10)
 	{
-		m = n % 10;
-		_putchar(m + '0');
-		n /= 10;
+		print_number(n / 10);
 	}
+	_putchar((n1 % 10) + '0');
 	_putchar ('\n');
 }
