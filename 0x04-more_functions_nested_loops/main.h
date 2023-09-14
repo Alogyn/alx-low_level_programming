@@ -22,5 +22,7 @@ void print_diagonal(int n);
 void print_square(int size);
 /* Task 10 */
 void print_triangle(int size);
+/* Task 12 */
+void print_number(int n);
 
 #endif
