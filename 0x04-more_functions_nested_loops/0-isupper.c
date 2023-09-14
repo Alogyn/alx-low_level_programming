@@ -1,4 +1,4 @@
-#include "main"
+#include "main.h"
 
 /*
  * Task 0. isupper
