@@ -12,5 +12,7 @@ void print_numbers(void);
 int _putchar(char c);
 /* Task 4 */
 void print_most_numbers(void);
+/* task 5 */
+void more_numbers(void);
 
 #endif
