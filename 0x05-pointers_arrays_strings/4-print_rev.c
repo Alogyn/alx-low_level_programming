@@ -20,10 +20,9 @@ void print_rev(char *s)
 	int length = 0;
 
 	/* Counter length loop */
-	while (*s != '\0')
+	while (s[length] != '\0')
 	{
 		++length;
-		++s;
 	}
 
 	/* Print the string character loop */
