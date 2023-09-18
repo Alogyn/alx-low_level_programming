@@ -30,7 +30,7 @@ int _atoi(char *s)
 	}
 
 	/* Convert loop */
-	for (; i <= length; i++)
+	for (; i < length; i++)
 	{
 		if (s[i] == '-')
 		{
