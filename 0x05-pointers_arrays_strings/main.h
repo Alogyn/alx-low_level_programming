@@ -16,5 +16,5 @@ void print_rev(char *s);
 void rev_string(char *s);
 /* Task 6 */
 void puts2(char *str);
-:x
+
 #endif
