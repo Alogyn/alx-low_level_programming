@@ -17,7 +17,7 @@
 void _puts(char *str)
 {
 	/* Loop to Print every character from the string */
-	for (*str != '\0'; str++)
+	while (*str != '\0'; str++)
 	{
 		_putchar(*str + '0');
 	}
