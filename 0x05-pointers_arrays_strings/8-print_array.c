@@ -25,7 +25,7 @@ void print_array(int *a, int n)
 	while (i < n)
 	{
 		/* Print all elements except last one from the array */
-		if (i < (n - 2))
+		if (i < (n - 1))
 		{
 			printf("%d, ", a[i]);
 		}
