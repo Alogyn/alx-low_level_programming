@@ -29,7 +29,7 @@ void puts_half(char *str)
 	if (length % 2 == 0)
 	{
 		/* Print Half of characters */
-		for (mid = (length / 2); str[mid] != 0; mii++)
+		for (mid = (length / 2); str[mid] != 0; mid++)
 		{
 			_putchar(str[mid]);
 		}
