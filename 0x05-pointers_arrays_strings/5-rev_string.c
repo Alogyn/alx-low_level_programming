@@ -28,7 +28,7 @@ void rev_string(char *s)
 	}
 	/* Swap the characters string */
 	beg = s;
-	end = length - 1;
+	end = s + length - 1;
 
 	while (beg < end)
 	{
