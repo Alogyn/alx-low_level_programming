@@ -17,7 +17,7 @@
 void print_rev(char *s)
 {
 	/* Declaration for the length string counter variable */
-	int length = 0;
+	int i, length = 0;
 
 	/* Counter length loop */
 	while (*s != '\0')
@@ -27,9 +27,9 @@ void print_rev(char *s)
 	}
 
 	/* Print the string character loop */
-	for (length > 0; length--)
+	for (i = length; i > 0; i--)
 	{
-		_putchar(s[length - 1]);
+		_putchar(s[i - 1]);
 	}
 	_putchar('\n');
 }
