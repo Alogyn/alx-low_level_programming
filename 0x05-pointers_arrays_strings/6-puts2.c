@@ -27,7 +27,7 @@ void puts2(char *str)
 	}
 
 	/* Print the other charahters */
-	for (i = 0; i < lenght)
+	for (i = 0; i < length)
 	{
 		_putchar(str[i]);
 		i += 2;
