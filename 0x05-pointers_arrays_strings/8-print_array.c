@@ -30,11 +30,12 @@ void print_array(int *a, int n)
 			printf("%d, ", a[i]);
 		}
 
-		/* print the last one element from the array */
+		/* Print the last one element from the array */
 		else
 		{
 			printf("%d", a[i]);
 		}
+		i++;
 	}
 	printf("\n");
 }
