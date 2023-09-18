@@ -18,5 +18,7 @@ void rev_string(char *s);
 void puts2(char *str);
 /* Task 7 */
 void puts_half(char *str);
+/* Task 8 */
+void print_array(int *a, int n);
 
 #endif
