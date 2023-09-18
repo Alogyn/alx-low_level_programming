@@ -21,7 +21,7 @@ void swap_int(int *a, int *b)
 	int memory;
 
 	/* Swap the values of 'a' and 'b' */
-	memory = *a;
+	memory = *b;
 	*b = *a;
 	*a = memory;
 }
