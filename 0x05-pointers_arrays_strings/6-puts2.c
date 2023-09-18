@@ -27,10 +27,9 @@ void puts2(char *str)
 	}
 
 	/* Print the other charahters */
-	for (i = 0; i < length)
+	for (i = 0; i < length; i += 2)
 	{
 		_putchar(str[i]);
-		i += 2;
 	}
 	_putchar('\n');
 }
