@@ -1,4 +1,5 @@
 #include "main.h"
+#include <limits.h>
 
 /*
  * Task (Advanced) 10. Great leaders are willing to sacrifice the numbers
