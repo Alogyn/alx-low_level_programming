@@ -17,7 +17,7 @@
 void puts_half(char *str)
 {
 	/* Variable declaration */
-	int length = 0, mid;
+	int length = 0;
 
 	/* String length counter loop */
 	while (str[length] != '\0')
@@ -29,9 +29,9 @@ void puts_half(char *str)
 	if (length % 2 == 0)
 	{
 		/* Print Half of characters */
-		for (mid = (length / 2); str[mid] != 0; mid++)
+		for (length /= 2; str[length] != 0; length++)
 		{
-			_putchar(str[mid]);
+			_putchar(str[length]);
 		}
 	}
 
@@ -39,9 +39,9 @@ void puts_half(char *str)
 	else
 	{
 		/* Print Half of characters */
-		for (mid = ((length - 1) / 2); str[mid] != 0; mid++)
+		for (length = ((length - 1) / 2); str[length] != 0; length++)
 		{
-			_putchar(str[mid]);
+			_putchar(str[length]);
 		}
 	}
 	_putchar('\n');
