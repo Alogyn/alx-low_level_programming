@@ -30,10 +30,13 @@ char *cap_string(char *str)
 	while (str[cap] != '\0')
 	{
 		/* Check various delimiters */
-		if (str[cap] == '.' || str[cap] == ' ' ||
-				str[cap] == ',' || str[cap] == '\n' ||
-				str[cap] == '\t' || str[cap] == '!' ||
-				str[cap] == '?')
+		if (str[cap] == 9 || str[cap] == 10 ||
+				str[cap] == 32 || str[cap] == 33 ||
+				str[cap] == 34 || str[cap] == 40 ||
+				str[cap] == 41 || str[cap] == 44 ||
+				str[cap] == 46 || str[cap] == 59 ||
+				str[cap] == 63 || str[cap] == 123 ||
+				str[cap] == 125)
 		{
 			if (str[cap + 1] > 96 && str[cap + 1] < 123)
 			{
@@ -44,3 +47,4 @@ char *cap_string(char *str)
 	}
 
 	return (str);
+}
