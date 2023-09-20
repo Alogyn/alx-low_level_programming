@@ -19,27 +19,25 @@ char *cap_string(char *str)
 	/* Capitalizing variable declaration */
 	int cap = 0;
 
+	/* First character in 'str' */
+	if (str[0] > 96 && str[0] < 123)
+	{
+		str[cap] -= 32;
+		cap++;
+	}
+
 	/* Capitalizing loop */
 	while (str[cap] != '\0')
 	{
-		/* First character in 'str' */
-		if (cap == 0)
-		{
-			if (str[cap] > 96 && str[cap] < 123)
-			{
-				str[cap] = str[cap] - 32;
-			}
-		}
-
 		/* Check various delimiters */
-		else if (str[cap - 1] == '.' || str[cap - 1] == ' ' ||
-				str[cap - 1] == ',' || str[cap - 1] == '\n' ||
-				str[cap - 1] == '\t' || str[cap - 1] == '!' ||
-				str[cap - 1] == '?')
+		if (str[cap] == '.' || str[cap] == ' ' ||
+				str[cap] == ',' || str[cap] == '\n' ||
+				str[cap] == '\t' || str[cap] == '!' ||
+				str[cap] == '?')
 		{
-			if (str[cap] > 96 && str[cap] < 123)
+			if (str[cap + 1] > 96 && str[cap + 1] < 123)
 			{
-				str[cap] = str[cap] - 32;
+				str[cap + 1] -= 32;
 			}
 		}
 		cap++;
