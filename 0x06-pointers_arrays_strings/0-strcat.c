@@ -29,7 +29,7 @@ char *_strcat(char *dest, char *src)
 	}
 
 	/* Append string from 'src' to 'dest' loop */
-	for (; append <=  count; append++)
+	for (; src[append] != '\0'; append++)
 	{
 		dest[append] = src[append];
 	}
