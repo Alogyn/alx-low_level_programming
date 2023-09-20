@@ -32,7 +32,6 @@ char *leet(char *str)
 			if (str[encode] == upper[i] || str[encode] == lower[i])
 			{
 				str[encode] = leet[i];
-				break;
 			}
 		}
 		encode++;
