@@ -23,7 +23,7 @@ char *_strcat(char *dest, char *src)
 	int append = 0;
 
 	/* String size count loop */
-	for (; src[count] != '\0')
+	while (src[count] != '\0')
 	{
 		count++;
 	}
