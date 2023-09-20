@@ -21,7 +21,7 @@
 int _strcmp(char *s1, char *s2)
 {
 	/* Result and loop variables declarations */
-	int i, result = 0;
+	int i = 0, result = 0;
 
 	/* Comparing string loop */
 	while (s1[i] != '\0' && s2[i] != '\0')
