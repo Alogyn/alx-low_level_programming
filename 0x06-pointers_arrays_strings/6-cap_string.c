@@ -22,8 +22,17 @@ char *cap_string(char *str)
 	/* Capitalizing loop */
 	while (str[cap] != '\0')
 	{
+		/* First character in 'str' */
+		if (cap == 0)
+		{
+			if (str[cap] > 96 && str[cap] < 123)
+			{
+				str[cap] = str[cap] - 32;
+			}
+		}
+
 		/* Check various delimiters */
-		if (str[cap - 1] == '.' || str[cap - 1] == ' ' ||
+		else if (str[cap - 1] == '.' || str[cap - 1] == ' ' ||
 				str[cap - 1] == ',' || str[cap - 1] == '\n' ||
 				str[cap - 1] == '\t' || str[cap - 1] == '!' ||
 				str[cap - 1] == '?')
