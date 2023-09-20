@@ -22,7 +22,7 @@ char *_strncpy(char *dest, char *src, int n)
 	int copy = 0;
 
 	/* Copying string loop */
-	while (src[copy] != '0' && copy < n)
+	while (src[copy] != '\0' && copy < n)
 	{
 		dest[copy] = src[copy];
 		copy++;
@@ -31,3 +31,9 @@ char *_strncpy(char *dest, char *src, int n)
 	/* Write NULL Bytes with the rest of 'n' */
 	while (copy < n)
 	{
+		dest[copy] = '\0';
+		copy++;
+	}
+
+	return (dest);
+}
