@@ -24,13 +24,13 @@ char *_strncat(char *dest, char *src, int n)
 	int count = 0;
 
 	/* String size count loop */
-	while (dest[count] != 0)
+	while (dest[count] != '\0')
 	{
 		count++;
 	}
 
 	/* Concatenates two strings */
-	for (; append < n && src[append] != 0; append++)
+	for (; append < n && src[append] != '\0'; append++)
 	{
 		dest[append + count] = src[append];
 	}
