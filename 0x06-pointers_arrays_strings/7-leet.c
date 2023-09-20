@@ -7,7 +7,7 @@
 /**
   * leet - Beginning/Starting point
   *
-  *@str: Input string pointer or argument
+  * @str: Input string pointer or argument
   *
   * Objectif: Encode a string into 1337
   *
