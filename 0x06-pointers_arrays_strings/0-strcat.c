@@ -36,7 +36,7 @@ char *_strcat(char *dest, char *src)
 	}
 
 	/* Terminating null byte */
-	dest[append] = '\0';
+	dest[count] = '\0';
 
 	return (dest);
 }
