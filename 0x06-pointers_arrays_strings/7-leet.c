@@ -19,7 +19,7 @@ char *leet(char *str)
 	/* Arrays and variables declarations */
 	int encode = 0, i = 0;
 	int upper[] = {65, 69, 79, 84, 76};
-	int lowwer[] = {97, 101, 111, 116, 108};
+	int lower[] = {97, 101, 111, 116, 108};
 	int leet[] = {52, 51, 48, 55, 49};
 
 	/* String characters loop */
