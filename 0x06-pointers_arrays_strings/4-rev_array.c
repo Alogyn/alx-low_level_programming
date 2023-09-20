@@ -28,6 +28,6 @@ void reverse_array(int *a, int n)
 		a[origin] = a[reverse];
 		a[reverse] = memory;
 		reverse--;
-		origin--;
+		origin++;
 	}
 }
