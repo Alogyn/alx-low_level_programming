@@ -23,13 +23,13 @@ char *_strcat(char *dest, char *src)
 	int append = 0;
 
 	/* String size count loop */
-	for (; src[count] != '\0')
+	for (; dest[count] != '\0')
 	{
 		count++;
 	}
 
 	/* Append string from 'src' to 'dest' loop */
-	for (; append < count; append++)
+	for (; append <=  count; append++)
 	{
 		dest[append] = src[append];
 	}
