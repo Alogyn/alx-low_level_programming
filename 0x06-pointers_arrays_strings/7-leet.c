@@ -23,7 +23,7 @@ char *leet(char *str)
 	int leet[] = {52, 51, 48, 55, 49};
 
 	/* String characters loop */
-	for (; *(str + encode) != '\0'; encode++)
+	while (*(str + encode) != '\0')
 	{
 		/* Leet characters change loop */
 		for (; i <= 4; i++)
@@ -36,6 +36,7 @@ char *leet(char *str)
 				break;
 			}
 		}
+		encode++;
 	}
 
 	return (str);
