@@ -31,7 +31,8 @@ char *_strcat(char *dest, char *src)
 	/* Append string from 'src' to 'dest' loop */
 	for (; src[append] != '\0'; append++)
 	{
-		dest[append] = src[append];
+		dest[count] = src[append];
+		count++;
 	}
 
 	/* Terminating null byte */
