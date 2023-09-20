@@ -18,23 +18,22 @@ char *leet(char *str)
 {
 	/* Arrays and variables declarations */
 	int encode = 0, i = 0;
-	int upper[] = {65, 69, 79, 84, 76};
-	int lower[] = {97, 101, 111, 116, 108};
-	int leet[] = {52, 51, 48, 55, 49};
+	char letter = "aAeEoOtTlL";
+	char leet = "4433007711";
 
 	/* String characters loop */
-	while (str[encode] != '\0')
+	for (; str[encode] != '\0'; encode++)
 	{
 		/* Leet characters change loop */
-		for (; i <= 4; i++)
+		for (; letter[i] != ''\0'; i++)
 		{
 			/* Check the leet conditions characters */
-			if (str[encode] == upper[i] || str[encode] == lower[i])
+			if (str[encode] == letter[i])
 			{
 				str[encode] = leet[i];
+				break;
 			}
 		}
-		encode++;
 	}
 
 	return (str);
