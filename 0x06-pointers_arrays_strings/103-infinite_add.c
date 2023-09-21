@@ -20,7 +20,7 @@
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int len1 = 0, len2 = 0, hold = 0, sum, i, j, k;
+	int len1 = 0, len2 = 0, hold = 0, sum = 0, i, j, k;
 
 	while (n1[len1] != '\0')
 		len1++;
