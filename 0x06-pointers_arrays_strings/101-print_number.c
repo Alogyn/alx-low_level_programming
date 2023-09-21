@@ -19,11 +19,32 @@ void print_number(int n)
 	/* variables declarations */
 	unsigned int digit;
 
+	/* NULL case */
+	if (n == 0)
+	{
+		_putchar(n);
+		return;
+	}
+
+	/* Negative number */
+	else if (n < 0 && n > -9)
+	{
+		_putchar(n);
+		return;
+	}
+
+	/* Positive number */
+	else if (n > 0 && n < 9)
+	{
+		_putchar(n);
+		return;
+	}
+
 	/* Digit checker loop */
-	while (n > 9 || n < -9)
+	while (n != 0 && (n > 9 || n < -9))
 	{
 		/* negative case */
-		if (n < 0)
+		if (n < -9)
 		{
 			_putchar('-');
 			n *= -1;
@@ -32,16 +53,10 @@ void print_number(int n)
 		}
 
 		/* Positive case */
-		else if (n > 0)
+		else if (n > 9)
 		{
 			n /= 10;
 			digit *= 10;
-		}
-
-		/* NULL case */
-		else
-		{
-			_putchar(n + '0');
 		}
 	}
 
