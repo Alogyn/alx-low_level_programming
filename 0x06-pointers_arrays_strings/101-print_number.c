@@ -32,10 +32,16 @@ void print_number(int n)
 		}
 
 		/* Positive case */
-		else if
+		else if (n > 0)
 		{
 			n /= 10;
 			digit *= 10;
+		}
+
+		/* NULL case */
+		else
+		{
+			_putchar(n);
 		}
 	}
 
