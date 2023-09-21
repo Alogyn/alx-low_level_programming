@@ -47,4 +47,3 @@ void print_number(int n)
 		_putchar(((n / digit) % 10) + '0');
 	}
 }
-}
