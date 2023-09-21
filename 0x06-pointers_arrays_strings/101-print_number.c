@@ -42,7 +42,7 @@ void print_number(int n)
 	}
 
 	/* Print numbers loop */
-	while (digit >= 1)
+	while (digit > 0)
 	{
 		_putchar(((digit / 10) % 10) + '0');
 		digit /= 10;
