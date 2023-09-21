@@ -41,7 +41,7 @@ void print_number(int n)
 		/* NULL case */
 		else
 		{
-			_putchar(n);
+			_putchar(n + '0');
 		}
 	}
 
