@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /*
  * Task (Advanced) 12. Noise is a buffer,
