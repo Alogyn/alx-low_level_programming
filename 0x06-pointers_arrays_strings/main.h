@@ -22,5 +22,7 @@ char *rot13(char *);
 /* Task 9 */
 void print_number(int n);
 int _putchar(char);
+/* Task 11 */
+char *infinite_add(char *n1, char *n2, char *r, int size_r);
 
 #endif
