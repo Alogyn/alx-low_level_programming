@@ -41,7 +41,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			j = n1[len1] - '0';
 		else
 			j = 0;
-		if (j >= 0)
+		if (len2 >= 0)
 			k = n2[len2] - '0';
 		else
 			k = 0;
