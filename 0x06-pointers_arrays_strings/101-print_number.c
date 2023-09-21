@@ -19,31 +19,32 @@ void print_number(int n)
 	/* variables declarations */
 	unsigned int digit = 1;
 
-	/* NULL case */
+	/* Null number */
 	if (n == 0)
 	{
 		_putchar('0');
 		return;
 	}
 
-	/* Negative case */
-	if (n < 0)
+	/* Negative number */
+	else if (n < 0)
 	{
 		_putchar('-');
 		n = -n;
 	}
 
-	/* Digit checker loop */
-	while (n > 0)
+	/* Digit checker */
+	while (n > 9)
 	{
+		/* Digit counter */
 		n /= 10;
 		digit *= 10;
 	}
 
-	/* Print the digits */
+	/* Print numbers loop */
 	while (digit >= 1)
 	{
+		_putchar(((digit / 10) % 10) + '0');
 		digit /= 10;
-		_putchar(((n / digit) % 10) + '0');
 	}
 }
