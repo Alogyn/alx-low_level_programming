@@ -16,42 +16,15 @@
 
 void print_number(int n)
 {
-	/* variables declarations */
-	unsigned int i, devider, digit = 1;
-
-	/* Null number */
-	if (n == 0)
-	{
-		_putchar(n);
-	}
-
-	/* Negative number */
-	else if (n < 0)
+	if (n < 0)
 	{
 		_putchar('-');
-		i = -n;
+		n = -n;
 	}
 
-	/* Positive number */
-	else
+	if (n / 10 != 0)
 	{
-		i = n;
-	}
-	
-	/* Devider number */
-	devider = i;
-
-	/* Digit checker */
-	while (devider > 9)
-	{
-		/* Digit counter */
-		devider /= 10;
-		digit *= 10;
-	}
-
-	/* Print numbers loop */
-	for (;digit >= 1; digit /= 10)
-	{
-		_putchar(((i / 10) % 10) + '0');
+		print_number(n / 10);
+		_putchar((n % 10) + '0');
 	}
 }
