@@ -19,42 +19,40 @@
 
 void print_buffer(char *b, int size)
 {
-	int i = 0, j = 0, k = 0;
+	/* offset = chunk tracker, i = loop variable, c = characters */
+	int offset = 0, i, c;
 
-	if (size > 0)
-	{
-		while (i < size)
-		{
-			printf("%.8x:", i);
-			j = i;
-			while (j < i)
-			{
-				if (j % 2 == 0)
-					printf(" ");
-				if (j < size)
-					printf("%.2x", *(b + j));
-				else
-					printf("  ");
-				j++;
-			}
-			printf(" ");
-			k = i;
-			while (k < i + 10)
-			{
-				if (k >= size)
-					break;
-				if (*(b + k) < 32 || *(b + k) > 126)
-					printf("%c", '.');
-				else
-					printf("%c", *(b + k));
-				k++;
-			}
-			printf("\n");
-			i = i + 10;
-		}
-	}
-	else
+	/* Empty/Invalid buffer */
+	if (size <= 0)
 	{
 		printf("\n");
+		return;
+	}
+
+	while (offset < size)
+	{
+		/* Print in the buffer hexadicimal */
+		printf("%08x: ", offset);
+		for (i = 0; i < 10 && (offset + i) < size; i++)
+		{
+			printf("%02x", *(b + offset + i));
+			if (i % 2)
+				printf(" ");
+		}
+		for (; i < 10; i++)
+		{
+			printf("  ");
+			if (i % 2)
+				printf(" ");
+		}
+		for (i = 0; i < 10 && (offset + i) < size; i++)
+		{
+			c = *(b + offset + i);
+			if (c < 32 || c > 126)
+				c = '.';
+			printf("%c", c);
+		}
+		printf("\n");
+		offset += 10;
 	}
 }
