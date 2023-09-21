@@ -17,5 +17,7 @@ char *string_toupper(char *str);
 char *cap_string(char *str);
 /* Task 7 */
 char *leet(char *str);
+/* Task 8 */
+char *rot13(char *);
 
 #endif
