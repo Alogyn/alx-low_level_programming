@@ -51,9 +51,8 @@ void print_number(int n)
 	}
 
 	/* Print numbers loop */
-	for (;digit > 0)
+	for (;digit > 0; digit /= 10)
 	{
 		_putchar((i % 10) + '0');
-		digit /= 10;
 	}
 }
