@@ -17,7 +17,7 @@
 void print_number(int n)
 {
 	/* variables declarations */
-	unsigned int digit;
+	unsigned int digit = 1;
 
 	/* NULL case */
 	if (n == 0)
