@@ -17,7 +17,7 @@
 void print_number(int n)
 {
 	/* variables declarations */
-	unsigned int number, digit;
+	unsigned int digit;
 
 	/* Digit checker loop */
 	while (n > 9 || n < -9)
