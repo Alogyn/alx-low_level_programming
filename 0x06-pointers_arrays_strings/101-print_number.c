@@ -17,7 +17,7 @@
 void print_number(int n)
 {
 	/* variables declarations */
-	unsigned int digit = 1;
+	unsigned int i, digit = 1;
 
 	/* Null number */
 	if (n == 0)
@@ -30,14 +30,19 @@ void print_number(int n)
 	else if (n < 0)
 	{
 		_putchar('-');
-		n = -n;
+		i = -n;
 	}
 
+	/* Positive number */
+	else
+	{
+		i = n;
+
 	/* Digit checker */
-	while (n > 9)
+	while (i > 9)
 	{
 		/* Digit counter */
-		n /= 10;
+		i /= 10;
 		digit *= 10;
 	}
 
