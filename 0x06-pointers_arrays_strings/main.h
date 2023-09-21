@@ -21,5 +21,6 @@ char *leet(char *str);
 char *rot13(char *);
 /* Task 9 */
 void print_number(int n);
+int _putchar(char);
 
 #endif
