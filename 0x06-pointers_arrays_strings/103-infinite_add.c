@@ -20,41 +20,42 @@
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	/* Variables declarations */
-	int len1 = 0, len2 = 0, hold = 0, sum, i, j;
+	int len1 = 0, len2 = 0, hold = 0, sum, i, j, k;
 
-	/* Calculing length of 'n1' */
 	while (n1[len1])
-	{
 		len1++;
-	}
-
-	/* Calculing length of 'n2' */
 	while (n2[len2])
-	{
 		len2++;
-	}
-	if (len1 + 1 > size_r || len2 + 1 > size_r)
-	{
+	if (len1 < len2)
+		hold = len2;
+	else
+		hold = len1;
+	if (hold + 1 > size_r)
 		return (0);
-	}
-	r[size_r] = '\0';
-	i = len1 - 1;
-	j = len2 - 1;
-	size_r--;
-	while (i >= 0 || j >= 0 || hold)
+	r[hold] = '\0';
+	for (i = hold - 1; i >= 0; i++)
 	{
-		sum = hold;
-		if (i >= 0)
-		{
-			sum += n1[i--] - '0';
-		}
+		len1--;
+		len2--;
+		if (len1 >= 0)
+			j = n1[len1] - '0';
+		else
+			j = 0;
 		if (j >= 0)
-		{
-			sum += n2[j--] - '0';
-		}
-		hold = sum / 10;
-		r[size_r--] = (sum % 10) + '0';
+			k = n2[len2] - '0';
+		else
+			k = 0;
+		r[i] = (j + k + sum) %10 + '0';
+		sum = (f + s + d) / 10;
 	}
-	return (r + size_r + 1);
+	if (sum == 1)
+	{
+		r[hold + 1] = '\0';
+		if (hold + 2 > size_r)
+			return (0);
+		while (hold-- >= 0)
+			r[hold + 1] = r[hold];
+		r[0] = sum  + '0';
+	}
+	return (r);
 }
