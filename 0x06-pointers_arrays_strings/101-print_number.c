@@ -17,7 +17,7 @@
 void print_number(int n)
 {
 	/* variables declarations */
-	unsigned int i, digit = 1;
+	unsigned int i, devider, digit = 1;
 
 	/* Null number */
 	if (n == 0)
@@ -38,19 +38,22 @@ void print_number(int n)
 	{
 		i = n;
 	}
+	
+	/* Devider number */
+	devider = i;
 
 	/* Digit checker */
-	while (i > 9)
+	while (devider > 9)
 	{
 		/* Digit counter */
-		i /= 10;
+		devider /= 10;
 		digit *= 10;
 	}
 
 	/* Print numbers loop */
-	while (digit > 0)
+	for (;digit > 0)
 	{
-		_putchar((digit % 10) + '0');
+		_putchar((i % 10) + '0');
 		digit /= 10;
 	}
 }
