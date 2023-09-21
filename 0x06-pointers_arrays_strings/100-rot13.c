@@ -17,7 +17,7 @@
 char *rot13(char *str)
 {
 	/* Arrays and variables declarations */
-	int encode = 0, i;
+	int encode = 0;
 	 /* Change string characters to rot13 loop */
 	while (str[encode] != '\0')
 	{
