@@ -45,7 +45,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			k = n2[len2] - '0';
 		else
 			k = 0;
-		r[i] = (j + k + sum) %10 + '0';
+		r[i] = (j + k + sum) % 10 + '0';
 		sum = (j + k + sum) / 10;
 	}
 	if (sum == 1)
