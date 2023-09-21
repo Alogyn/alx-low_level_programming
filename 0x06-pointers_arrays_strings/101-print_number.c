@@ -22,7 +22,7 @@ void print_number(int n)
 	/* NULL case */
 	if (n == 0)
 	{
-		_putchar(n);
+		_putchar('0');
 		return;
 	}
 
