@@ -41,7 +41,7 @@ void print_number(int n)
 	}
 
 	/* Print the digits */
-	while (digit > 1)
+	while (digit >= 1)
 	{
 		digit /= 10;
 		_putchar(((n / digit) % 10) + '0');
