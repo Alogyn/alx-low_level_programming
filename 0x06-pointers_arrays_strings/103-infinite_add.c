@@ -33,7 +33,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	if (hold + 1 > size_r)
 		return (0);
 	r[hold] = '\0';
-	for (i = hold - 1; i >= 0; i++)
+	for (i = hold - 1; i >= 0; i--)
 	{
 		len1--;
 		len2--;
