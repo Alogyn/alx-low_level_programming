@@ -37,6 +37,7 @@ void print_number(int n)
 	else
 	{
 		i = n;
+	}
 
 	/* Digit checker */
 	while (i > 9)
