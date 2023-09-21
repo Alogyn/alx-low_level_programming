@@ -20,7 +20,7 @@
 void print_buffer(char *b, int size)
 {
 	/* Variables declarations */
-	int i, j, k;
+	int i = 0, j = 0, k = 0;
 
 	if (size > 0)
 	{
