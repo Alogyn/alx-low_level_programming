@@ -19,7 +19,6 @@
 
 void print_buffer(char *b, int size)
 {
-	/* Variables declarations */
 	int i = 0, j = 0, k = 0;
 
 	if (size > 0)
@@ -50,7 +49,12 @@ void print_buffer(char *b, int size)
 					printf("%c", *(b + k));
 				k++;
 			}
+			printf("\n");
 			i = i + 10;
 		}
+	}
+	else
+	{
+		printf("\n");
 	}
 }
