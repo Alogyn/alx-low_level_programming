@@ -7,6 +7,8 @@ Welcome to the Low-Level Programming & Algorithm Projects repository! This repos
 ## Trimester 1: Linux Basics, Permissions, Redirections, Syscalls
 
  - [0x00.](0x00-hello_world) C - Hello, World
+ - [0x01.](0x01-variables_if_else_while) C - Variables, if, else, while
+
 ---
 
 ## Special Thanks for Project Guidance to 
