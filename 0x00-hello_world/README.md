@@ -1,6 +1,6 @@
 # 0x00. C - Hello, World - Low-level programming Project
 
-Welcome to the ALX Low-Level Programming repository for the "Hello, World" project. In this project, you will learn the basics of C programming and various essential concepts related to it. This repository contains scripts and C programs to help you practice and understand these concepts.
+Welcome to the ALX Low-Level Programming repository for the "C - Hello, World" project. In this project, you will learn the basics of C programming and various essential concepts related to it. This repository contains scripts and C programs to help you practice and understand these concepts.
 
 ## Learning Objectives
 
