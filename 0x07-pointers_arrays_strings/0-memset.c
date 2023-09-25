@@ -17,7 +17,7 @@
 
 char *_memset(char *s, char b, unsigned int n)
 {
-	/* Loop variable declaration */
+	/* Fill loop variable declaration */
 	unsigned int fill = 0;
 
 	/* Resoring value of b in char 's' pointer */
