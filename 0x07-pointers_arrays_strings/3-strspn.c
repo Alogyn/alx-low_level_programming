@@ -44,7 +44,8 @@ unsigned int _strspn(char *s, char *accept)
 			break;
 		}
 		s++;
+		length++;
 	}
 
-	return (s);
+	return (length);
 }
