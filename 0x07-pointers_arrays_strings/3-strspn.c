@@ -8,7 +8,7 @@
   * _strspn - Get the length of a prefix substring
   *
   * @s: Input pointer to string (char)
-  * @accept: Number of Bytes accepted
+  * @accept: Accepted Bytes (char)
   *
   * Return: The number of bytes in the initial segment of 's'
   * which consist only of bytes from 'accept'
