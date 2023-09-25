@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /*
  * Task 7. The line of life is a ragged diagonal between duty and desire
