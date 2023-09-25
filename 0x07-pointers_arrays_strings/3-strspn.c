@@ -17,29 +17,28 @@
 unsigned int _strspn(char *s, char *accept)
 {
 	/* Loops and breaker variables declaration */
-	unsigned int length = 0, checker;
-	bool breaker;
+	unsigned int length = 0, checker, breaker;
 
 	/* Length counter loop */
 	while (*(s + length) != '\0')
 	{
 		/* Initializing variables */
 		checker = 0;
-		breaker = false;
+		breaker = 1;
 		/* Checker 'accept' loop */
 		while (accept[checker] != '\0')
 		{
 			/* Finding consist char */
 			if (*(s + length) ==  accept[checker])
 			{
-				breaker = true;
+				breaker = 0;
 				break;
 			}
 			checker++;
 		}
 
-		/* in case not consist char */
-		if (breaker == false)
+		/* In case not consist char */
+		if (breaker == 1)
 		{
 			break;
 		}
