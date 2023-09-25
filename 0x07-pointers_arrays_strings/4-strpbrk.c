@@ -18,22 +18,22 @@
 char *_strpbrk(char *s, char *accept)
 {
 	/* Loops, checker and breaker variables declarations */
-	unsigned int check;
+	unsigned int search = 0, check;
 
 	/* Searching in string 's' */
-	while (*s != '\0')
+	while (*(s + search) != '\0')
 	{
 		/* Checking the occurrence characters */
 		check = 0;
-		while (accept[check] != '\0')
+		while (*(accept  + search) != '\0')
 		{
-			if (*s == accept[check])
+			if (*(s + search) == *(accept + check))
 			{
-				return (s);
+				return (s + search);
 			}
 			check++;
 		}
-		s++;
+		search++;
 	}
 
 	return ('\n');
