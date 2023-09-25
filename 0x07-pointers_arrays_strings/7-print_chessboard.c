@@ -14,19 +14,20 @@
 
 void print_chessboard(char (*a)[8])
 {
-	/* */
-	int line = 0, column = 0;
+	/* Variables declarations*/
+	int index = 0, track;
 
-	/* */
-	while (line < 8)
+	/* Index to traverse the 'a' array*/
+	while (index < 64)
 	{
-		/* */
-		while (column < 8)
+		/* Keep track of the column index within the current row */
+		if (index % 8 == 0 && index != 0)
 		{
-			_putchar(a[line][column]);
-			column++;
+			track = index;
+			_putchar('\n');
 		}
-		_putchar('\n');
-		line++;
+		_putchar(a[index / 8][index - track]);
+		index++;
 	}
+	_putchar('\n');
 }
