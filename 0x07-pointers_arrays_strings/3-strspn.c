@@ -21,7 +21,7 @@ unsigned int _strspn(char *s, char *accept)
 	bool breaker;
 
 	/* Length counter loop */
-	while (*s != '\0')
+	while (*(s + length) != '\0')
 	{
 		/* Initializing variables */
 		checker = 0;
@@ -30,7 +30,7 @@ unsigned int _strspn(char *s, char *accept)
 		while (accept[checker] != '\0')
 		{
 			/* Finding consist char */
-			if (*s ==  accept[checker])
+			if (*(s + length) ==  accept[checker])
 			{
 				breaker = true;
 				break;
@@ -43,7 +43,6 @@ unsigned int _strspn(char *s, char *accept)
 		{
 			break;
 		}
-		s++;
 		length++;
 	}
 
