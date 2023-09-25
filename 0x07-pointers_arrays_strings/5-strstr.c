@@ -17,23 +17,29 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	/* Loops variablesa declarations */
-	unsigned int sub = 0, check;
+	/* pointers declarations */
+	char *sub, *check;
 
-	/* */
-	while (*(needle + sub) != '\0')
+	/* Occurrence of the substring 'needle' in the string 'haystack' */
+	while (*haystack != '\0')
 	{
-		/* */
-		check = 0;
-		while (*(haystack + check) != '\0')
+		/* Initializing the pointers */
+		sub = haystack;
+		check = needle;
+
+		/* Checking and return the char occured */
+		while (*check != '\0' && *haystack == *check)
 		{
-			if (*(needle + sub) == *(haystack + check))
-			{
-				return (needle + sub);
-			}
+			haystack++;
 			check++;
 		}
-		sub++;
+
+		/* Check the char pointed to by the pointer n is the null */
+		if (!*check)
+		{
+			return (sub);
+		}
+		haystack++;
 	}
 
 	/* In cas nothing found */
