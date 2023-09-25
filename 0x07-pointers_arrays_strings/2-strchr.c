@@ -27,6 +27,12 @@ char *_strchr(char *s, char c)
 		s++;
 	}
 
+	/* In case 'c' is 'NULL' */
+	if (c == '\0')
+	{
+		return (s);
+	}
+
 	/* In case 'c' not found in 's' */
 	return ('\0');
 }
