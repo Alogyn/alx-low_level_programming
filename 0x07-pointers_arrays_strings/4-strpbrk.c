@@ -17,7 +17,7 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-	/* Loops, checker and breaker variables declarations */
+	/* Loops variables declarations */
 	unsigned int search = 0, check;
 
 	/* Searching in string 's' */
@@ -25,7 +25,7 @@ char *_strpbrk(char *s, char *accept)
 	{
 		/* Checking the occurrence characters */
 		check = 0;
-		while (*(accept  + search) != '\0')
+		while (*(accept  + check) != '\0')
 		{
 			if (*(s + search) == *(accept + check))
 			{
