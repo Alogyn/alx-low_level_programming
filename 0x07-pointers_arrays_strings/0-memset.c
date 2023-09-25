@@ -12,7 +12,7 @@
   * @b: Input constant byte (char)
   * @n: Input the Bytes filled (unsigned int)
   *
-  * Return:Pointer to 's'
+  * Return: Pointer to 's'
   */
 
 char *_memset(char *s, char b, unsigned int n)
