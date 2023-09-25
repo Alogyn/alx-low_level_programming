@@ -36,5 +36,6 @@ char *_strpbrk(char *s, char *accept)
 		search++;
 	}
 
-	return ('\n');
+	/* In case nothing found */
+	return ('\0');
 }
