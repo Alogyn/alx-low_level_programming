@@ -25,7 +25,7 @@ char *_strpbrk(char *s, char *accept)
 	{
 		/* Checking the occurrence characters */
 		check = 0;
-		while (*(accept  + check) != '\0')
+		while (*(accept + check) != '\0')
 		{
 			if (*(s + search) == *(accept + check))
 			{
