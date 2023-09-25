@@ -18,13 +18,13 @@
 char *_memset(char *s, char b, unsigned int n)
 {
 	/* Loop variable declaration */
-	unsigned int i = 0;
+	unsigned int fill = 0;
 
 	/* Resoring value of b in char 's' pointer */
-	while (i < n)
+	while (fill < n)
 	{
-		*(s + i) = b;
-		i++;
+		*(s + fill) = b;
+		fill++;
 	}
 	return (s);
 }
