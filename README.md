@@ -8,6 +8,8 @@ Welcome to the Low-Level Programming & Algorithm Projects repository! This repos
 
  - [0x00.](0x00-hello_world) C - Hello, World
  - [0x01.](0x01-variables_if_else_while) C - Variables, if, else, while
+ - [0x02.](0x02-functions_nested_loops) C - Functions, nested loops
+ - [0x03.](0x03-debugging) C - Debugging
 
 ---
 
