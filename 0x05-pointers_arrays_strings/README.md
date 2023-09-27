@@ -53,7 +53,7 @@ The project consists of a series of scripts, each designed to explore various as
     - **[100-atoi.c:](100-atoi.c)** Convert a string to an integer.
 
 11. **Don't hate the hacker, hate the code**
-    - **[101-keygen.c:](101-keygen.c)** Generate random valid passwords for the program 101-crackme.
+    - **[101-keygen.c:](101-keygen.c)** Generate random valid passwords for the program [101-crackme.](https://github.com/alx-tools/0x04.c)
 
 
 ## Resources
