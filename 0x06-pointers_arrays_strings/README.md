@@ -21,7 +21,7 @@ By completing this project, you will:
 The project consists of a series of scripts, each designed to explore various advanced aspects of C programming, with a primary focus on more pointers, arrays, and strings. This task set aims to further enhance your understanding of these essential concepts. Below is a brief summary of the tasks to be tackled:
 
 0. **strcat**
-    - **[:]()** Write a function that concatenates two strings. The function should append the `src` string to the `dest` string, overwriting the terminating null byte (`\0`) at the end of `dest`, and then add a terminating null byte. It should return a pointer to the resulting string `dest`.
+    - **[0-strcat.c:](0-strcat.c)** Write a function that concatenates two strings. The function should append the `src` string to the `dest` string, overwriting the terminating null byte (`\0`) at the end of `dest`, and then add a terminating null byte. It should return a pointer to the resulting string `dest`.
 
 1. **strncat**
     - **[1-strncat.c:](1-strncat.c)** Write a function that concatenates two strings. This function is similar to `strcat`, but it appends at most `n` bytes from `src` to `dest`. Additionally, `src` does not need to be null-terminated if it contains `n` or more bytes. Return a pointer to the resulting string `dest`.
