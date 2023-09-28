@@ -18,7 +18,7 @@ int factorial(int n)
 	if (n > 0)
 	{
 		/* Factorial calculation */
-		return (n * factorial(n -1));
+		return (n * factorial(n - 1));
 	}
 
 	/* In case 'n' is NULL */
