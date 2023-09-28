@@ -15,7 +15,7 @@
   * -1 if does not found for the number 'n'
   */
 
-_sqrt_calculater(int n, int m)
+int _sqrt_calculater(int n, int m)
 {
 	/* Check the square equivalence */
 	if (m * m == n)
