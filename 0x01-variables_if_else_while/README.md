@@ -13,7 +13,7 @@ By completing this project, you will:
 
 ## Project Structure
 
-The project contains a series of scripts, each addressing specific tasks related to C basics. Here's a brief overview of the tasks:
+The project consists of a series of scripts, with each script focusing on distinct aspects of C programming, including variables, if-else conditions, and while loop implementations. Here's a brief overview of the tasks:
 
 0. **Positive anything is better than negative nothing**
     - **[0-positive_or_negative.c:](0-positive_or_negative.c)** Determine whether a random number is positive, negative, or zero.
