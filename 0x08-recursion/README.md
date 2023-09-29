@@ -1,4 +1,4 @@
-# 0x07. C - Even more pointers, arrays and strings - Low-level programming Project
+# 0x08. C - Recursion- Low-level programming Project
 
 Welcome to the ALX Low-Level Programming repository for the 'C - Recursion' project. In this project, you will embark on a captivating journey into the concept of recursion in C programming. Recursion, a fundamental programming technique, involves solving complex problems by breaking them down into smaller, similar subproblems. This repository serves as your dedicated platform, containing scripts and C programs essential for you to grasp the recursive paradigm, refine your problem-solving skills, and apply recursive algorithms effectively in C programming. Get ready to explore the power and elegance of recursive solutions in this exciting project.
 
