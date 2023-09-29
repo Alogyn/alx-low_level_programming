@@ -17,29 +17,18 @@
 
 int wildcmp(char *s1, char *s2)
 {
-	/* Check the identical characters */
-	if (*s1 == *s2)
-	{
-		return (wildcmp(s1 + 1, s2 + 1));
-	}
-
-	/* In case the two strings reach the identical end */
+	/* In case both strings are empty */
 	if (*s1 == '\0' && *s2 == '\0')
 	{
 		return (1);
 	}
 
-	/* In case the seconde string have '*' */
-	if (*s2 == '*')
+	/* The current charcters s1 match the s2 or '*' */
+	if (*s2 == '*' || *s1 == *s2)
 	{
-		return (wildcmp(s1, s2 + 1) || wildcmp(s1 + 1, s2));
+		return ((*s1 != '\0' && *s2 == '*') ? (wildcmp(s1 + 1, s2) ||
+				wildcmp(s1, s2 + 1)) : wildcmp(s1 + 1, s2 + 1));
 	}
-
-	/* In case the first string end and the second end after the last '*' */
-	if (*s1 == '\0' && *s2 == '*' && *(s2 + 1) != '\0')
-	{
-		return (0);
-	}
-
+	/* In case no match found */
 	return (0);
 }
