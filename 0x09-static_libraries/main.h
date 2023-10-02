@@ -1,5 +1,5 @@
 #ifndef MAIN_H
-#define MIAIN_H
+#define MAIN_H
 
 /* Task 0 functions */
 int _putchar(char c);
