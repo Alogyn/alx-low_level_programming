@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
 		{
 			i -= 1;
 		}
-		sum += 1;
+		sum++;
 	}
 
 	printf("%d\n", sum);
