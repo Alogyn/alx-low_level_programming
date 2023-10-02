@@ -31,22 +31,22 @@ int main(int argc, char *argv[])
 	i = atoi(argv[1]);
 	while (i > 0)
 	{
-		/* 25 cents condition */
 		if (i >= 25)
 		{
 			i -= 25;
 		}
-		/* 10 cents condition */
 		else if (i >= 10)
 		{
 			i -= 10;
 		}
-		/* 5 cents condition */
 		else if (i >= 5)
 		{
 			i -= 5;
 		}
-		/* 1 cent condition */
+		else if (i >= 2)
+		{
+			i -= 2;
+		}
 		else if (i >= 1)
 		{
 			i -= 1;
