@@ -53,7 +53,6 @@ int main(int argc, char *argv[])
 		}
 		sum++;
 	}
-
 	printf("%d\n", sum);
 	return (0);
 }
