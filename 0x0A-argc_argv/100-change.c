@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	int i, sum = 0;
 
 	/* Checks if theres no arguments */
-	if (argc != 2 || atoi(argv[1]) <= 0))
+	if (argc != 2 || atoi(argv[1]) <= 0)
 	{
 		printf("Error\n");
 		return (1);
