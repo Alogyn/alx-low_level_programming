@@ -3,5 +3,7 @@
 
 /* Task 0 */
 char *create_array(unsigned int size, char c);
+/* Task 1 */
+char *_strdup(char *str);
 
 #endif
