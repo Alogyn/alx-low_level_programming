@@ -41,7 +41,10 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
+
+	/* Initializing the loop variable */
 	i = 0;
+
 	/* In case the allocation success */
 	while (i < length - 1)
 	{
