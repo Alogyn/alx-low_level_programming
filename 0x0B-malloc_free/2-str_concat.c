@@ -7,7 +7,7 @@
  */
 
 /**
-  * str_concat - Returns a pointer to a 2 dimensional array of integers
+  * str_concat - Concatenates two strings
   *
   * @s1: Input first string (char)
   * @s2: Input second string (char)
@@ -18,7 +18,7 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	/* Pointer and loop variable declarations */
+	/* Pointer and loop variables declarations */
 	char *concat;
 	unsigned int i = 0, j = 0, length = 1;
 
