@@ -26,8 +26,10 @@ int **alloc_grid(int width, int height)
 	/* Memory for the dimesion height */
 	grid = malloc(height * sizeof(int *));
 	if (grid == NULL)
+	{
 		free(grid);
 		return (NULL);
+	}
 	for (i = 0; i < height; i++)
 	{
 		/* Memory for the dimension width */
