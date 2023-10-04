@@ -17,14 +17,14 @@
 
 void free_grid(int **grid, int height)
 {
-	/* Free the non empty 'grid' */
-	if (grid != NULL && height != 0)
+	/* Loop variables declaration */
+	int i = 0;
+
+	/* Free the dimension 'grid' */
+	while (i < height)
 	{
-		while (height >= 0)
-		{
-			free(grid[height]);
-			height--;
-		}
-		free(grid);
+		free(grid[i]);
+		i++;
 	}
+	free(grid);
 }
