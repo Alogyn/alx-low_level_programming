@@ -32,7 +32,6 @@ int **alloc_grid(int width, int height)
 	{
 		/* Memory for the dimension width */
 		grid[i] = malloc(width * sizeof(int *));
-		/* In case fail */
 		if (grid[i] == NULL)
 		{
 			while (i >= 0)
@@ -45,16 +44,16 @@ int **alloc_grid(int width, int height)
 		}
 		i++;
 	}
-		/* In case success */
-		while (i < height)
+	i = 0;
+	while (i < height)
+	{
+		j = 0;
+		while (j < width)
 		{
-			j = 0;
-			while (j < width)
-			{
-				grid[i][j] = 0;
-				j++;
-			}
-			i++;
+			grid[i][j] = 0;
+			j++;
 		}
+		i++;
+	}
 	return (grid);
 }
