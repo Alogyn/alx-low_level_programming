@@ -11,5 +11,7 @@ char *str_concat(char *s1, char *s2);
 int **alloc_grid(int width, int height);
 /* Task 4 */
 void free_grid(int **grid, int height);
+/* Task 5 */
+char *argstostr(int ac, char **av);
 
 #endif
