@@ -48,6 +48,7 @@ int **alloc_grid(int width, int height)
 		/* In case success */
 		while (i < height)
 		{
+			j = 0;
 			while (j < width)
 			{
 				grid[i][j] = 0;
