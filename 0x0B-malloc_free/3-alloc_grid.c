@@ -18,8 +18,7 @@
 int **alloc_grid(int width, int height)
 {
 	/* Pointer and loop variables declarations */
-	int **grid;
-	int i = 0, j = 0;
+	int **grid, i, j;
 
 	/* In case no input */
 	if (width < 1 || height < 1)
@@ -27,6 +26,7 @@ int **alloc_grid(int width, int height)
 	/* Memory for the dimesion height */
 	grid = malloc(height * sizeof(int *));
 	if (grid == NULL)
+		free(gridout);
 		return (NULL);
 	for (i = 0; i < height; i++)
 	{
@@ -38,8 +38,8 @@ int **alloc_grid(int width, int height)
 				free(grid[i]);
 				i--;
 			}
-		free(grid);
-		return (NULL);
+			free(grid);
+			return (NULL);
 	}
 	/* Displaying the two dimesional array */
 	for (j = 0; j < width; j++)
