@@ -33,6 +33,7 @@ int **alloc_grid(int width, int height)
 		/* Memory for the dimension width */
 		grid[i] = malloc(width * sizeof(int));
 		if (grid[i] == NULL)
+		{
 			while (i >= 0)
 			{
 				free(grid[i]);
@@ -40,6 +41,7 @@ int **alloc_grid(int width, int height)
 			}
 			free(grid);
 			return (NULL);
+		}
 	}
 	/* Displaying the two dimesional array */
 	for (j = 0; j < width; j++)
