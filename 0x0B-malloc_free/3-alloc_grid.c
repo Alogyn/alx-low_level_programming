@@ -28,32 +28,23 @@ int **alloc_grid(int width, int height)
 	grid = malloc(height * sizeof(int *));
 	if (grid == NULL)
 		return (NULL);
-	while (i < height)
+	for (i = 0; i < height; i++)
 	{
 		/* Memory for the dimension width */
-		grid[i] = malloc(width * sizeof(int *));
+		grid[i] = malloc(width * sizeof(int));
 		if (grid[i] == NULL)
-		{
 			while (i >= 0)
 			{
 				free(grid[i]);
 				i--;
 			}
-			free(grid);
-			return (NULL);
-		}
-		i++;
+		free(grid);
+		return (NULL);
 	}
-	i = 0;
-	while (i < height)
+	/* Displaying the two dimesional array */
+	for (j = 0; j < width; j++)
 	{
-		j = 0;
-		while (j < width)
-		{
-			grid[i][j] = 0;
-			j++;
-		}
-		i++;
+		grid[i][j] = 0;
 	}
 	return (grid);
 }
