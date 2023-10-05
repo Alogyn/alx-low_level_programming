@@ -18,15 +18,15 @@
 char *argstostr(int ac, char **av)
 {
 	char *concat;
-	int i = 0, j = 0, k = 0, l;
+	int i, j, k, l;
 
 	if (ac == 0)
 		return (NULL);
-	for (; i < ac; i++)
+	for (k = i = 0; i < ac; i++)
 	{
 		if (av[i] == NULL)
 			return (NULL);
-		for (;av[i][j] != '\0'; j++)
+		for (j = 0; av[i][j] != '\0'; j++)
 		{
 			k++;
 		}
