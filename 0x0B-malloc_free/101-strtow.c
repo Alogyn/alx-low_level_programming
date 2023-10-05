@@ -87,7 +87,7 @@ int word_count(char *str)
 /**
   * lib_dim - Frees the array of a dimension
   * @ar: Pointer array (char)
-  * @: Input number (int)
+  * @i: Input number (int)
   *
   * Return: None
   */
