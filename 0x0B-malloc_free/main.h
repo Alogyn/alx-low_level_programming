@@ -13,5 +13,7 @@ int **alloc_grid(int width, int height);
 void free_grid(int **grid, int height);
 /* Task 5 */
 char *argstostr(int ac, char **av);
+/* Task 6 */
+char **strtow(char *str);
 
 #endif
