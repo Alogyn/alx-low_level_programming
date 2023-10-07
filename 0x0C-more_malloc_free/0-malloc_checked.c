@@ -18,7 +18,7 @@ void *malloc_checked(unsigned int b)
 	/* Pointer declaration */
 	int *allocate;
 
-	/* */
+	/* Allocation memory */
 	allocate = malloc(b);
 
 	/* In case the allocation to memory fail */
