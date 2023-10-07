@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdlib.c>
+#include <stdlib.h>
 
 /*
  * Task 0. Trust no one
