@@ -1,0 +1,122 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*
+ * Task (Advanced) 5. We must accept finite disappointment,
+ * but never lose infinite hope
+ */
+int _putchar(char c);
+void print_error();
+int is_digit(char c);
+int mul(char *num1, char *num2);
+
+/** main - Multiplies two positive numbers
+  *
+  * @argc: The argument number (int)
+  * @argv: The Argument vector (char)
+  *
+  * Return: 0 If sucess, 98 if fail
+  */
+
+int main(int argc, char *argv[])
+{
+	/* Loop variables declarations */
+	int i = 0, j = 0;
+
+	/* Check if the arguments number is correct */
+	if (argc != 3)
+	{
+		print_error();
+	}
+	/* Check if the arguments are digits */
+	while (i < 2)
+	{
+		while (argv[i + 1][j] != '\0')
+		{
+			if (!is_digit(argv[i + 1][j]))
+			{
+				print_error();
+			}
+			j++;
+		}
+		i++;
+	}
+	/* Multiplie the two integers */
+	mul(argv[1], argv[2]);
+
+	return (0);
+}
+
+/**
+  * print_error - Prints error message if the main function fail
+  *
+  * Return: Nothing
+  */
+
+void print_error()
+{
+	printf("error\n");
+	exit(98);
+}
+
+/** is_digit - Returns the digit values
+  *
+  * @c: Input string (char)
+  *
+  * Return: The digit value
+  */
+
+int is_digit(char c)
+{
+	/* Return the digit value */
+	return (c >= '0' && c <= '9');
+}
+
+/**
+  * mul - Multiplies two digit
+  *
+  * @num1: Input first pointer number (char)
+  * @num2: Input second pointer number 9char)
+  *
+  * Return: Alaways 0 (success)
+  */
+
+int mul(char *num1, char *num2)
+{
+	/* Pointer and loop and variables declarations */
+	int len1 = 0, len2 = 0, i, j;
+	int *result, carry = 0, temp;
+
+	/* Calculing the numbers length */
+	while (num1[len1] != '\0')
+		len1++;
+	while (num2[len2] != '\0')
+		len2++;
+	/* Allocate the memory */
+	result = calloc(len1 + len2, sizeof(int));
+	/* In case allocation fail */
+	if (result == NULL)
+		print_error();
+	/* Multiplying the digits */
+	for (i = len1 - 1; i >= 0; i--)
+	{
+		carry = 0;
+		 for (j = len2 - 1; j >= 0; j--)
+		 {
+			 temp = (num1[i] - '0') * (num2[j] - '0') + result[i + j + 1] + carry;
+			 carry = temp / 10;
+			 result[i + j + 1] = temp % 10;
+		 }
+		 result[i + j + 1] += carry;
+	}
+	/* Finding the first non-zero digit in the result */
+	for (i = 0; i < len1 + len2; i++)
+		if (result[i] != 0) break;
+	/* Print the result */
+	for (; i < len1 + len2; i++)
+		printf("%d", result[i]);
+	_putchar('\n');
+
+	free(result);
+	return (0);
+}
