@@ -7,6 +7,6 @@
   * for the token 3.14159265359
   */
 
-#define PI 3.14159265359 
+#define PI 3.14159265359
 
 #endif /* _PI_H */
