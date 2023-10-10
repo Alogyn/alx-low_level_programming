@@ -25,4 +25,5 @@ void free_dog(dog_t *d)
 
 		/* Free the dog structure */
 		free(d);
+	}
 }
