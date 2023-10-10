@@ -6,8 +6,8 @@
   * Objectif: Defines a macro named SIZE as an abbreviation for the token 1024
 */
 
-#ifndef OBJECT_LIKE_MACRO_H
-#define OBJECT_LIKE_MACRO_H
+#ifndef 0_OBJECT_LIKE_MACRO_H
+#define 0_OBJECT_LIKE_MACRO_H
 
 #define SIZE 1024
 
