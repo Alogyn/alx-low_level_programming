@@ -1,4 +1,5 @@
 #include "dog.h"
+#include <stddef.h>
 
 /*
  * Task 1. A dog is the only thing on earth that loves you more
