@@ -1,5 +1,5 @@
-#ifndef PI_H
-#define PI_H
+#ifndef _1_PI_H
+#define _1_PI_H
 
 /**
   * Task 1. Pi
@@ -9,4 +9,4 @@
 
 #define PI 3.14159265359 
 
-#endif /* PI_H */
+#endif /* _1_PI_H */
