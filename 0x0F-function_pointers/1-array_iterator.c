@@ -10,7 +10,7 @@
   * on each element of an array
   *
   * @array : Input an array (int)
-  * @size: Input size of ana array (structure size_t)
+  * @size: Input size of an array (structure size_t)
   * @action: Pointer to the function (void)
   *
   * Return: None
