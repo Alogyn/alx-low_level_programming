@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /*
  * Task (Advanced) 4. Most hackers are young because young people
@@ -26,8 +27,8 @@ int main(int argc, char *argv[])
 	/* Checks if the correct number of arguments is provided */
 	if (argc != 2)
 	{
-		fprintf(stderr, "Error\n");
-		return (1);
+		printf("Error\n");
+		exit(1);
 	}
 
 	/* Converts the argument to an integer */
