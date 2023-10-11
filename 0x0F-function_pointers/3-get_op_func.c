@@ -27,13 +27,14 @@ int (*get_op_func(char *s))(int, int)
 		{"*", op_mul},
 		{"/", op_div},
 		{"%", op_mod},
+		{NULL, NULL}
 	};
 
 	/* Loop to checks the 5 statements above */
-	while (i < 5)
+	while (operation[i].op != NULL)
 	{
 		/* In case one of the statements exist */
-		if (s[0] == operation->op[i])
+		if (*s == *operation[i].op && s[1] == '\0')
 		{
 			return (operation[i].f);
 		}
