@@ -37,6 +37,7 @@ int (*get_op_func(char *s))(int, int)
 		{
 			return (operation[i].f);
 		}
+		i++;
 	}
 
 	/* In case 's' doesn't matches any of the 5 statements above */
