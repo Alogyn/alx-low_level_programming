@@ -21,7 +21,7 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 	/* Loop variable declaration */
 	unsigned int i = 0;
 
-	/* Checks if the 'array' and the 'size' are not empty */
+	/* Checks if the 'array' and the 'action' are not empty */
 	if (array != NULL && action != NULL)
 	{
 		/* Loop to run the function 'action' */
