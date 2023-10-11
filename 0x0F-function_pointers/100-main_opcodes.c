@@ -21,7 +21,7 @@
 int main(int argc, char *argv[])
 {
 	/* Pointer loop and variable declarations */
-	char *m;
+	char *m = (char *) main;
 	int i, numbytes;
 
 	/* Checks if the correct number of arguments is provided */
@@ -37,18 +37,16 @@ int main(int argc, char *argv[])
 	/* Checks if the number of bytes is negative */
 	if (numbytes < 0)
 	{
-		fprintf(stderr, "Error\n");
-		return (2);
+		printf("Error\n");
+		exit(2);
 	}
-
-	m = (char *)main;
 
 	/* Prints the opcodes of the main function */
 	for (i = 0; i < numbytes; i++)
 	{
-		printf("%02hhx", m[i]);
+		printf("%02x", m[i] & 0XFF);
 
-		if (i < numbytes - 1)
+		if (i != numbytes - 1)
 			printf(" ");
 	}
 
