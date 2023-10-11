@@ -13,8 +13,8 @@
  */
 typedef struct op
 {
-    char *op;
-    int (*f)(int a, int b);
+	char *op;
+	int (*f)(int a, int b);
 } op_t;
 
 /* Prototypes used in '3-op_functions.c' */
