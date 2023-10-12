@@ -14,13 +14,12 @@
 
 void print_all(const char * const format, ...)
 {
-	/* */
+	/* Variadic, pointer and loop variable declarations */
 	va_list print_any;
 	unsigned i = 0;
 	char *str;
 
 	va_start(print_any, format);
-
 	while (format != NULL && format[i] != '\0')
 	{
 		switch (format[i])
@@ -37,9 +36,7 @@ void print_all(const char * const format, ...)
 			case 's':
 				str = va_arg(print_any, char*);
 				if (str == NULL)
-				{
 					str = "(nil)";
-				}
 				printf("%s", str);
 				break;
 			default:
@@ -50,9 +47,7 @@ void print_all(const char * const format, ...)
 		if (format[i + 1] != '\0' && (format[i] == 'c' ||
 					format[i] == 'i' || format[i] == 'f' ||
 					format[i] == 's'))
-		{
 			printf(", ");
-		}
 		i++;
 	}
 	printf("\n");
