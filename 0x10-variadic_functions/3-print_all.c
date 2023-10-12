@@ -16,7 +16,7 @@ void print_all(const char * const format, ...)
 {
 	/* Variadic, pointer and loop variable declarations */
 	va_list print_any;
-	unsigned i = 0;
+	unsigned int i = 0;
 	char *str;
 
 	va_start(print_any, format);
