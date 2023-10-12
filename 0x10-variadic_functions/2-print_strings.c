@@ -10,7 +10,7 @@
   * @separator: The string to seprate two integers (char)
   * @n: The number of arguments (int)
   *
-  * Returnn: None
+  * Return: None
   */
 
 void print_strings(const char *separator, const unsigned int n, ...)
