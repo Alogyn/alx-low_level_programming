@@ -16,14 +16,14 @@ int sum_them_all(const unsigned int n, ...)
 {
 	/* Variadic, Loop and variable declarations */
 	va_list list_param;
-	unsigne int i = 0;
+	unsigned int i = 0;
 	int sum = 0;
 
 	/* Beginning of the 'list_param' variadic */
 	va_start(list_param, n);
 
 	/* In case 'n' is empty */
-	if (n == NULL)
+	if (n == 0)
 	{
 		return (0);
 	}
@@ -40,4 +40,6 @@ int sum_them_all(const unsigned int n, ...)
 
 	/* Ending of the 'list_param' variadic */
 	va_end(list_param);
+
+	return (sum);
 }
