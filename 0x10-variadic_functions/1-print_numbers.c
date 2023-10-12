@@ -25,23 +25,21 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		separator = "";
 	}
 
-	else
+	while (i < n)
 	{
-		while (i < n)
+		if (i == n - 1)
 		{
-			if (i == n - 1)
-			{
-				printf("%d\n", va_arg(print_num, int));
-			}
-
-			else
-			{
-				printf("%d", va_arg(print_num, int));
-				printf("%s", separator);
-			}
-			i++;
+			printf("%d", va_arg(print_num, int));
 		}
+
+		else
+		{
+			printf("%d", va_arg(print_num, int));
+			printf("%s", separator);
+		}
+		i++;
 	}
 
+	printf("\n");
 	va_end(print_num);
 }
