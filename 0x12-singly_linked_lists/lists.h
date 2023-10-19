@@ -11,7 +11,7 @@
   * struct list_s - Structure single linked list
   *
   * @str: String pointer (char)
-  * @length: String length (int)
+  * @len: String length (int)
   * @next: Strcture de the next node pointer (struct)
   */
 
