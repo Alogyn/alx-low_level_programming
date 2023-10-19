@@ -15,7 +15,7 @@ list_t *add_node(list_t **head, const char *str)
 {
 	/* Pointer variable store declarations */
 	list_t *new;
-	size_t char_num;
+	size_t i;
 
 	/* Alocate memory */
 	new = malloc(sizeof(list_t));
@@ -24,10 +24,10 @@ list_t *add_node(list_t **head, const char *str)
 
 	/* Input duplication */
 	new->str = strdup(str);
-	for (nchar = 0; str[nchar]; nchar++)
+	for (i = 0; str[i]; i++)
 		;
 	/* Set the length and next pointer of the new node */
-	new->len = nchar;
+	new->len = i;
 	new->next = *head;
 	*head = new;
 
