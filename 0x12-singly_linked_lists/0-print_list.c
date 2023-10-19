@@ -3,7 +3,7 @@
 /* Task 0. Print list */
 
 /**
-  * print_lis - Prints all the elements of a 'list_t' list
+  * print_list - Prints all the elements of a 'list_t' list
   *
   * @h: List name
   *
