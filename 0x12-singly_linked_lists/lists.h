@@ -8,7 +8,7 @@
 #include <string.h>
 
 /**
-  * list_s - Structure single linked list
+  * struct list_s - Structure single linked list
   *
   * @str: String pointer (char)
   * @length: String length (int)
