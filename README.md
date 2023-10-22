@@ -15,6 +15,8 @@ Welcome to the Low-Level Programming & Algorithm Projects repository! This repos
  - [0x06.](0x06-pointers_arrays_strings) C - More pointers, arrays and strings
  - [0x07.](0x07-pointers_arrays_strings) C - Even more pointers, arrays and strings
  - [0x08.](0x08-recursion) C - Recursion
+ - [0x09.](0x09-static_libraries) C - Static libraries
+ - [0x0A.](0x0A-argc_argv) C - argc, argv
 
 ---
 
