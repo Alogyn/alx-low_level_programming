@@ -39,7 +39,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	{
 		temp = *head;
 		/* Loop activ untill we reach the last node */
-		while (!temp->next)
+		while (temp->next != NULL)
 			temp = temp->next;
 		/* Set the last node to the new_node */
 		temp->next = new_node;
