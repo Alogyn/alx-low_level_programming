@@ -16,11 +16,11 @@
 int pop_listint(listint_t **head)
 {
 	/* Store and Temporary pointer declaration  */
-	int n = 0;
+	int n;
 	listint_t *temp;
 
 	/* In case 'head' is empty */
-	if (!*head || !head)
+	if (!*head)
 		return(0);
 
 	/* Store the current node in 'temp' */
