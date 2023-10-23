@@ -22,7 +22,7 @@ void free_listint(listint_t *head)
 		/* Store the current node in 'temp' */
 		temp = head;
 
-		/* Move 'head' to the nex node */
+		/* Move 'head' to the next node */
 		head = head->next;
 
 		/* Free the memory */
