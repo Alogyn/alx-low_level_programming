@@ -21,7 +21,7 @@ int pop_listint(listint_t **head)
 
 	/* In case 'head' is empty */
 	if (!*head)
-		return(0);
+		return (0);
 
 	/* Store the current node in 'temp' */
 	temp = *head;
