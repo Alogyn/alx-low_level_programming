@@ -17,6 +17,10 @@ void free_listint2(listint_t **head)
 	/* Temporary pointer declaration */
 	listint_t *temp;
 
+	/* In case 'head' is empty */
+	if (!head)
+		return;
+
 	while (head)
 	{
 		/* Store the current node in 'temp' */
