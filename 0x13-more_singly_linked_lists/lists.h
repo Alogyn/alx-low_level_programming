@@ -40,5 +40,7 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index);
 int sum_listint(listint_t *head);
 /* Task 9 */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
+/* Task 10 */
+int delete_nodeint_at_index(listint_t **head, unsigned int index);
 
 #endif /* LISTS_H */
