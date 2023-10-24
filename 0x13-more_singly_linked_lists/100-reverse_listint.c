@@ -15,9 +15,7 @@
 listint_t *reverse_listint(listint_t **head)
 {
 	/* Pointers declaration */
-	listint_t *prev = NULL;
-	listint_t *current = *head;
-	listint_t *next = NULL;
+	listint_t *prev = NULL, *next;
 
 	if (!head || !*head)
 		return (NULL);
@@ -26,12 +24,12 @@ listint_t *reverse_listint(listint_t **head)
 		return (*head);
 
 	/* Save, move and reverse the nodes */
-	while (current != NULL)
+	while (*head)
 	{
-		next = current->next;
-		current->next = prev;
-		prev = current;
-		current = next;
+		next = (*head)->next;
+		(*head)->next = prev;
+		prev = *head;
+		*head = next;
 	}
 
 	/* Update the head to the new first node */
