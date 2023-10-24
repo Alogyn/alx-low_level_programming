@@ -25,21 +25,21 @@ size_t print_listint_safe(const listint_t *head)
 	while (head != NULL)
 	{
 		/* Check if the current node is in the list */
-		for (i = 0; i < num; i++)
+		for (i = 0; i < count; i++)
 		{
 			if (head == list[i])
 			{
 				/* Print the node with an arrow indicating */
 				printf("-> [%p] %d\n", (void *)head, head->n);
 				free(list);
-				return (num);
+				return (count);
 			}
 		}
 
-		num++;
+		count++;
 
 		/* Update the list */
-		list = _r(list, num, head);
+		list = _r(list, count, head);
 
 		/* Print the current node and move to the next one */
 		printf("[%p] %d\n", (void *)head, head->n);
@@ -47,7 +47,7 @@ size_t print_listint_safe(const listint_t *head)
 	}
 	/* Free the list */
 	free(list);
-	return (num);
+	return (count);
 }
 
 /**
