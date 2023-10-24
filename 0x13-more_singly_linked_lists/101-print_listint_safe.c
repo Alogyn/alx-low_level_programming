@@ -35,6 +35,9 @@ size_t print_listint_safe(const listint_t *head)
 			break;
 		}
 	}
+	/* Print the loop node if there is a loop */
+	if (loop)
+		printf("Loop starts at: [%p] %d\n", (void *)loop_node, loop_node->n);
 	/* Reset the slow pointer */
 	slow = head;
 	while (slow)
