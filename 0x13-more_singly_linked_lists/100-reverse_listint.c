@@ -19,6 +19,12 @@ listint_t *reverse_listint(listint_t **head)
 	listint_t *current = *head;
 	listint_t *next = NULL;
 
+	if (!head || !*head)
+		return (NULL);
+
+	if (!(*head)->next)
+		return (*head);
+
 	/* Save, move and reverse the nodes */
 	while (current != NULL)
 	{
