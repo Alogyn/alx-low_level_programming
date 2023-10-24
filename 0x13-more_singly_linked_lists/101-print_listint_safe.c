@@ -4,6 +4,9 @@
  * Task (Advanced) 12. Print (safe version)
  */
 
+const listint_t **_r(const listint_t **list, size_t size,
+		const listint_t *new);
+
 /**
   * print_listint_safe - Prints a 'listint_t' linked list
   *
@@ -14,45 +17,75 @@
 
 size_t print_listint_safe(const listint_t *head)
 {
-	/* Pointers, counter and llop variables declarations */
-	const listint_t *slow, *fast, *loop_node = NULL;
-	size_t count = 0;
-	int loop = 0;
+	/* Counter and loop variables declarations */
+	size_t i, count = 0;
+	const listint_t **list = NULL;
 
-	/* Initialize slow and fast pointers */
-	slow = head;
-	fast = head;
-	/* Detect a loop in the linked list */
-	while (slow && fast && fast->next)
+	/* Traverse the linked list */
+	while (head != NULL)
 	{
-		slow = slow->next;
-		fast = fast->next->next;
-		/* Set loop flag to true and identify the loop node */
-		if (slow == fast)
+		/* Check if the current node is in the list */
+		for (i = 0; i < num; i++)
 		{
-			loop = 1;
-			loop_node = slow;
-			break;
+			if (head == list[i])
+			{
+				/* Print the node with an arrow indicating */
+				printf("-> [%p] %d\n", (void *)head, head->n);
+				free(list);
+				return (num);
+			}
 		}
+
+		num++;
+
+		/* Update the list */
+		list = _r(list, num, head);
+
+		/* Print the current node and move to the next one */
+		printf("[%p] %d\n", (void *)head, head->n);
+		head = head->next;
 	}
-	/* Print the loop node if there is a loop */
-	if (loop)
-		printf("Loop starts at: [%p] %d\n", (void *)loop_node, loop_node->n);
-	/* Reset the slow pointer */
-	slow = head;
-	while (slow)
+	/* Free the list */
+	free(list);
+	return (num);
+}
+
+/**
+  * _r - Reallocates memory for an array of pointers
+  * to the nodes in a linked list
+  *
+  * @list: The old lis append
+  * @size: The size of new list
+  * @new: The new node
+  *
+  * Return: The pointer to the new list
+  */
+
+const listint_t **_r(const listint_t **list, size_t size, const listint_t *new)
+{
+	/* Pointer and loop variable declarations */
+	const listint_t **newlist;
+	size_t i;
+
+	/* Allocate memory */
+	newlist = malloc(size * sizeof(listint_t *));
+
+	/* In case allocation fail */
+	if (newlist == NULL)
 	{
-		/* Print the current node's address and value */
-		printf("[%p] %d\n", (void *)slow, slow->n);
-		count++;
-		/* Print the loop node and exit the loop */
-		if (loop && slow == loop_node)
-		{
-			printf("-> [%p] %d\n", (void *)slow, slow->n);
-			break;
-		}
-		/* Move the slow pointer to the next node */
-		slow = slow->next;
+		free(list);
+		exit(98);
 	}
-	return (count);
+
+	/* Copy the old list to the new list */
+	for (i = 0; i < size - 1; i++)
+		newlist[i] = list[i];
+
+	/* Add the new node to the new list */
+	newlist[i] = new;
+
+	/* Free the memory */
+	free(list);
+
+	return (newlist);
 }
