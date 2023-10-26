@@ -12,5 +12,7 @@ int _putchar(char c);
 int get_bit(unsigned long int n, unsigned int index);
 /* Task 3 */
 int set_bit(unsigned long int *n, unsigned int index);
+/* Task 4 */
+int clear_bit(unsigned long int *n, unsigned int index);
 
 #endif /* MAIN_H */
