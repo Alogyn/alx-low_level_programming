@@ -17,7 +17,8 @@ Welcome to the Low-Level Programming & Algorithm Projects repository! This repos
  - [0x08.](0x08-recursion) C - Recursion
  - [0x09.](0x09-static_libraries) C - Static libraries
  - [0x0A.](0x0A-argc_argv) C - argc, argv
-
+ - [0x0B.](0x0B-malloc_free) C - malloc, free
+ - [0x0C.](0x0C-more_malloc_free) C - More malloc, free 
 ---
 
 ## Author
