@@ -5,7 +5,13 @@
  */
 
 /**
+  * read_textfile - Reads a text file and prints it
+  * to the 'POSIX' standard output
   *
+  * @filename: Name of the file to be read
+  * @letters: Number of letters to be read and printed
+  *
+  * Return: The number of letters read and printed, otherwise '0' if fail
   */
 
 ssize_t read_textfile(const char *filename, size_t letters)
@@ -24,12 +30,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	/* In case allocated memory fail */
 	if (!buffer)
 	{
-		close(open_file);
+		close(file_open);
 		return (0);
 	}
 
 	/* In case read file fail, free the memory and close file */
-	file_read = read(file_descriptor, buffer, letters);
+	file_read = read(file_open, buffer, letters);
 	if (file_read == -1)
 	{
 		free(buffer);
@@ -38,7 +44,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 
 	/* In case write action fail, free memory and close the file */
-	file_write = write(STDOUT_FILENO, buffer, bytes_read);
+	file_write = write(STDOUT_FILENO, buffer, file_read);
 	if (file_write == -1 || file_write != file_read)
 	{
 		free(buffer);
@@ -47,6 +53,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 
 	free(buffer);
-	close(open_file);
+	close(file_open);
 	return (file_write);
 }
