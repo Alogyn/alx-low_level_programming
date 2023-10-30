@@ -79,9 +79,9 @@ void copy_file(const char *file_from, const char *file_to)
 	int source_fd = open_file(file_from, O_RDONLY, 0, READ_ERROR);
 	int destination_fd = open_file(file_to, O_WRONLY | O_CREAT | O_TRUNC,
 			S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | 
-			_IROTH, WRITE_ERROR);
+			S_IROTH, WRITE_ERROR);
 	char buffer[BUFF_SIZE];
-	ssize_t file_read, file_write, total_write = 0;
+	ssize_t file_read, file_write, total_read = 0;
 
 	/* Copy content from source to destination in chunks */
 	while ((file_read = read(source_fd, buffer + total_read,
