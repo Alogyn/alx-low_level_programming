@@ -20,6 +20,9 @@ Welcome to the Low-Level Programming & Algorithm Projects repository! This repos
  - [0x0B.](0x0B-malloc_free) C - malloc, free
  - [0x0C.](0x0C-more_malloc_free) C - More malloc, free
  - [0x0D.](0x0D-preprocessor) C - Preprocessor
+ - [0x0E.](0x0E-structures_typedef) C - Structures, typedef
+ - [0x0F.](0x0F-function_pointers) C - Function pointers
+ - [0x10.](0x10-variadic_functions) C - Variadic functions
 ---
 
 ## Author
