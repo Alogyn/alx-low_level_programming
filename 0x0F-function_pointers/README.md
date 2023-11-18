@@ -26,7 +26,7 @@ This project is designed to deepen your understanding and mastery of function po
     - **[2-int_index.c:](2-int_index.c)** Write a function `int_index` that searches for an integer in an array. It takes an array, its size, and a function pointer (`cmp`) as parameters. It returns the index of the first element for which the comparison function does not return 0.
 
 3. **A goal is not always meant to be reached, it often serves simply as something to aim at**
-    - **[3-main.c:](3-main.c)** **[3-op_functions.c:](3-op_functions.c)** **[3-get_op_func.c:](3-get_op_func.c)** **[3-calc.h:](3-calc.h)** Write a program that performs simple operations (+, -, *, /, %) on two integers. The program takes the operator and two numbers as command-line arguments and prints the result. The operations are encapsulated in separate functions.
+    - **[3-main.c](3-main.c)**, **[3-op_functions.c](3-op_functions.c)**, **[3-get_op_func.c](3-get_op_func.c)**, **[3-calc.h:](3-calc.h)** Write a program that performs simple operations (+, -, *, /, %) on two integers. The program takes the operator and two numbers as command-line arguments and prints the result. The operations are encapsulated in separate functions.
 
 4. **Most hackers are young because young people tend to be adaptable. As long as you remain adaptable, you can always be a good hacker (Advanced)**
     - **[100-main_opcodes.c:](100-main_opcodes.c)** Write a program that prints the opcodes of its own main function. The program takes the number of bytes as a command-line argument and prints the corresponding opcodes in hexadecimal.
