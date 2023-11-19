@@ -17,25 +17,25 @@ By completing this project, you will:
 The goal of this project is to delve into the implementation and manipulation of singly linked lists in the C programming language. Singly linked lists are fundamental data structures that provide efficient insertion and deletion operations. This project will guide you through various tasks to understand, implement, and manipulate singly linked lists, enhancing your skills in data structure management.
 
 0. **Print list**
-    - **[0-print_list.c:](0-print_list.c)** Write a function that prints all the elements of a `listint_t` list.
+    - **[0-print_list.c:](0-print_list.c)** This task involves creating a C function that prints all the elements of a linked list. The function has the prototype `size_t print_list(const list_t *h);` and returns the number of nodes. The elements are printed in a specific format, and if the string (`str`) is NULL, it prints `[0] (nil)`.
 
 1. **List length**
-    - **[1-list_len.c:](1-list_len.c)** Write a function that returns the number of elements in a linked `listint_t` list.
+    - **[1-list_len.c:](1-list_len.c)** The objective is to implement a function that returns the number of elements in a linked list. The function has the prototype `size_t list_len(const list_t *h);`. It calculates and returns the count of nodes in the given linked list.
 
 2. **Add node**
-    - **[2-add_node.c:](2-add_node.c)** Write a function that adds a new node at the beginning of a `listint_t` list. 
+    - **[2-add_node.c:](2-add_node.c)** n this task, you are expected to create a function that adds a new node at the end of a linked list. The function has the prototype `list_t *add_node_end(list_t **head, const char *str);` and returns the address of the new element. The string (str) needs to be duplicated, and the function should return NULL if it fails.
 
 3. **Add node at the end**
-    - **[3-add_node_end.c:](3-add_node_end.c)** Write a function that adds a new node at the end of a `listint_t` list.
+    - **[3-add_node_end.c:](3-add_node_end.c)** The goal is to implement a function that frees a linked list. The function has the prototype `void free_list(list_t *head);`, and it frees the memory occupied by each node in the linked list.
 
 4. **Free list**
     - **[4-free_list.c:](4-free_list.c)** Write a function that frees a `listint_t` list.
 
 5. **The Hare and the Tortoise (Advanced)**
-    - **[100-first.c:](100-first.c)** In this task, you are required to create a C program that includes a function to print a specific message before the execution of the `main` function. The message, displayed using `printf`, is a poetic excerpt: "You're beat! and yet, you must allow, I bore my house upon my back!" This program simulates a race between a tortoise and a hare, with the additional lines printed before the race description in the `main` function.
+    - **[100-first.c:](100-first.c)** For this advanced task, you need to write a C program that prints specific lines using the `printf` function before the `main` function is executed. The lines are part of a poetic excerpt: "You're beat! and yet, you must allow, I bore my house upon my back!" This program simulates a race between a tortoise and a hare.
 
 6. **Real programmers can write assembly code in any language (Advanced)**
-    - **[101-hello_holberton.asm:](101-hello_holberton.asm)** This task challenges you to write a 64-bit assembly program that prints "Hello, Holberton," followed by a new line. The program should use the `printf` function and must be compiled using `nasm` and `gcc` with specific commands provided in the prompt. The goal is to showcase your ability to write assembly code and integrate it into a C program to produce the specified output.
+    - **[101-hello_holberton.asm:](101-hello_holberton.asm)** In this advanced assembly programming task, you are required to write a 64-bit program that prints "Hello, Holberton" using only the `printf` function. The program must be written in assembly language, compiled using `nasm` and `gcc`, and execute without the use of interrupts. The specific commands for compilation are provided in the prompt.
 
 ## Resources
 
