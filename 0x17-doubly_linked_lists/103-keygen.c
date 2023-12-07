@@ -93,11 +93,9 @@ int main(int argc, char **argv)
 		0x723161513346655a, 0x6b756f494b646850
 	};
 	(void) argc;
-
 	/* Calculate the length of the username */
 	for (len = 0; argv[1][len]; len++)
 		;
-
 	/* f1 */
 	keygen[0] = ((char *)alph)[(len ^ 59) & 63];
 	/* f2 */
@@ -124,10 +122,8 @@ int main(int argc, char **argv)
 	/* f6 */
 	keygen[5] = ((char *)alph)[f6(argv[1])];
 	keygen[6] = '\0';
-
 	/* Print the generated key */
 	printf("%s\n", keygen);
-
 	return (0);
 }
 
