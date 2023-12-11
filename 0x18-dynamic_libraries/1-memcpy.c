@@ -1,30 +1,17 @@
 #include "main.h"
-
-/*
- * Task 1. memcpy
- */
-
 /**
-  * _memcpy - Copies 'n' bytes from memory area 'src' to memory area 'dest'
-  *
-  * @dest: Output pointer to a memory area (char)
-  * @src: Input pointer to a memory area (char)
-  * @n: Input the Bytes copied (insigned int)
-  *
-  * Return: Pointer to 'dest'
-  */
-
+ * _memcpy - copies memory area,
+ * @dest: destination memory area.
+ * @src: source memory area.
+ * @n: bytes filled.
+ * Return: the pointer to dest.
+ */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	/* Copy loop Variable declaration */
-	unsigned int copy = 0;
+	unsigned int i;
 
-	/* Copying 'n' bytes from 'src' to 'dest' */
-	while (copy < n)
-	{
-		*(dest + copy) = *(src + copy);
-		copy++;
-	}
+	for (i = 0; i < n; i++)
+		*(dest + i) =  *(src + i);
 
 	return (dest);
 }

@@ -1,42 +1,31 @@
 #include "main.h"
 
-/*
- * Task 0. strcat
- */
-
 /**
-  * _strcat - Beginning/Starting point
-  *
-  * @src: Original string pointer or argument
-  * @dest: Append string pointer or argument
-  *
-  * Objectif: Concatenate two strings
-  *
-  * Return: The pointer to dest
-  */
+ * *_strcat - function commute srtings
+ * @dest: param pointer to a char
+ * @src: param pointer to a char
+ * Return: return value of dest
+ */
 
 char *_strcat(char *dest, char *src)
 {
-	/* String size count variable declaration */
-	int count = 0;
-	/* Append variable declaration */
-	int append = 0;
+	int i;
+	int j;
 
-	/* String size count loop */
-	while (dest[count] != '\0')
+	i = 0;
+	j = 0;
+
+	while (dest[i] != '\0')
 	{
-		count++;
+		i++;
+	}
+	while (src[j] != '\0')
+	{
+		dest[i] = src[j];
+		j++;
+		i++;
 	}
 
-	/* Append string from 'src' to 'dest' loop */
-	for (; src[append] != '\0'; append++)
-	{
-		dest[count] = src[append];
-		count++;
-	}
-
-	/* Terminating null byte */
-	dest[count] = '\0';
-
+	dest[i] = '\0';
 	return (dest);
 }

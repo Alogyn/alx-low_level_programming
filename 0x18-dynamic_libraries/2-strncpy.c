@@ -1,39 +1,20 @@
 #include "main.h"
-
-/*
- * Task 2. strncpy
- */
-
 /**
-  * _strncpy - Beginning/Starting point
-  *
-  * @src: Original string pointer or argument
-  * @dest: Copy string pointer or argument
-  * @n: Bytes number used from the string 'src'
-  *
-  * Objectif: Copy a string
-  *
-  * Return: The pointer to dest
-  */
+ * _strncpy - copies a string
+ * @dest: destination.
+ * @src: source.
+ * @n: amount of bytes from src.
+ * Return: the pointer to dest.
+ */
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	/* Copy variable declaration */
-	int copy = 0;
+	int i;
 
-	/* Copying string loop */
-	while (src[copy] != '\0' && copy < n)
-	{
-		dest[copy] = src[copy];
-		copy++;
-	}
-
-	/* Write NULL Bytes with the rest of 'n' */
-	while (copy < n)
-	{
-		dest[copy] = '\0';
-		copy++;
-	}
+	for (i = 0; i < n && src[i] != '\0'; i++)
+		dest[i] = src[i];
+	for ( ; i < n; i++)
+		dest[i] = '\0';
 
 	return (dest);
 }

@@ -1,49 +1,28 @@
 #include "main.h"
 
-/*
- * Task 3. strspn
- */
-
 /**
-  * _strspn - Get the length of a prefix substring
-  *
-  * @s: Input pointer to string (char)
-  * @accept: Accepted Bytes (char)
-  *
-  * Return: The number of bytes in the initial segment of 's'
-  * which consist only of bytes from 'accept'
-  */
-
+ * _strspn - gets the length of a prefix substring.
+ * @s: initial segment.
+ * @accept: accepted bytes.
+ * Return: the number of accepted bytes.
+ */
 unsigned int _strspn(char *s, char *accept)
 {
-	/* Loops and breaker variables declaration */
-	unsigned int length = 0, checker, breaker;
+	unsigned int i, j, bool;
 
-	/* Length counter loop */
-	while (*(s + length) != '\0')
+	for (i = 0; *(s + i) != '\0'; i++)
 	{
-		/* Initializing variables */
-		checker = 0;
-		breaker = 1;
-		/* Checker 'accept' loop */
-		while (accept[checker] != '\0')
+		bool = 1;
+		for (j = 0; *(accept + j) != '\0'; j++)
 		{
-			/* Finding consist char */
-			if (*(s + length) ==  accept[checker])
+			if (*(s + i) == *(accept + j))
 			{
-				breaker = 0;
+				bool = 0;
 				break;
 			}
-			checker++;
 		}
-
-		/* In case not consist char */
-		if (breaker == 1)
-		{
+		if (bool == 1)
 			break;
-		}
-		length++;
 	}
-
-	return (length);
+	return (i);
 }

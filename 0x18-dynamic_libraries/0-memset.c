@@ -1,30 +1,17 @@
 #include "main.h"
-
-/*
- * Task 0. memset
- */
-
 /**
-  * _memset - Fills the first 'n' bytes of the memory area pointed to by
-  * 's' with the constant byte 'b'
-  *
-  * @s: Input pointer to memory area (char)
-  * @b: Input constant byte (char)
-  * @n: Input the Bytes filled (unsigned int)
-  *
-  * Return: Pointer to 's'
-  */
-
+ * _memset - fills memory with a constant byte,
+ * @s: memory area.
+ * @b: constant byte.
+ * @n: bytes filled.
+ * Return: the pointer to dest.
+ */
 char *_memset(char *s, char b, unsigned int n)
 {
-	/* Fill loop variable declaration */
-	unsigned int fill = 0;
+	unsigned int i;
 
-	/* Resoring value of b in char 's' pointer */
-	while (fill < n)
-	{
-		*(s + fill) = b;
-		fill++;
-	}
+	for (i = 0; i < n; i++)
+		*(s + i) =  b;
+
 	return (s);
 }

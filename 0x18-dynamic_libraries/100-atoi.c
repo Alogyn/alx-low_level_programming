@@ -1,56 +1,34 @@
 #include "main.h"
-#include <limits.h>
-
-/*
- * Task (Advanced) 10. Great leaders are willing to sacrifice the numbers
- * to save the people. Poor leaders sacrifice the people to save the numbers
- */
 
 /**
-  * _atoi - Beginning/Starting point
-  *
-  * @s:
-  *
-  * Objectif: Convert a string to an integer
-  *
-  * Return: Converted integer from string
-  */
-
+ * _atoi - converts a string to an integer.
+ * @s: input string.
+ * Return: integer.
+ */
 int _atoi(char *s)
 {
-	/* Variables declarations */
-	int convert = 0;
-	int length = 0;
-	int sign = 1;
-	int i = 0;
+	unsigned int count = 0, size = 0, oi = 0, pn = 1, m = 1, i;
 
-	/* String length counter loop */
-	while (s[length] != '\0')
+	while (*(s + count) != '\0')
 	{
-		length++;
-	}
-
-	/* Convert loop */
-	for (; i < length; i++)
-	{
-		if (s[i] == '-')
-		{
-			sign = -sign;
-		}
-
-		else if (s[i] >= '0' && s[i] <= '9')
-		{
-			if (convert > (INT_MAX - (s[i] - '0')) / 10)
-			{
-				return ((sign == 1) ? INT_MAX : INT_MIN);
-			}
-			convert = convert * 10 + (s[i] - '0');
-		}
-
-		else if (convert != 0)
-		{
+		if (size > 0 && (*(s + count) < '0' || *(s + count) > '9'))
 			break;
+		if (*(s + count) == '-')
+			pn *= -1;
+
+		if ((*(s + count) >= '0') && (*(s + count) <= '9'))
+		{
+			if (size > 0)
+				m *= 10;
+			size++;
 		}
+		count++;
 	}
-	return (convert * sign);
+
+	for (i = count - size; i < count; i++)
+	{
+		oi = oi + ((*(s + i) - 48) * m);
+		m /= 10;
+	}
+	return (oi * pn);
 }

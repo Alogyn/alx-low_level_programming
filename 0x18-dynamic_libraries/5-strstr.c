@@ -1,47 +1,31 @@
 #include "main.h"
 
-/*
- * Task 5. strstr
- */
-
 /**
-  * _strstr - Finds the first occurrence of the substring 'needle'
-  * in the string 'haystack'. The terminating null bytes (\0) are not compared
-  *
-  * @haystack: Input pointer to string (char)
-  * @needle: Occurrence of the substring (char)
-  *
-  * Return: Pointer to the beginning of the located substring,
-  * or NULL if the substring is not found
-  */
-
+ * _strstr - finds the first occurrence of the substring.
+ * needle in the string haystack.
+ * @haystack: entire string.
+ * @needle: substring.
+ * Return: pointer to the beginning of located substring or
+ * NULL if the substring is not found.
+*/
 char *_strstr(char *haystack, char *needle)
 {
-	/* pointers declarations */
-	char *sub, *check;
+	char *bhaystack;
+	char *pneedle;
 
-	/* Occurrence of the substring 'needle' in the string 'haystack' */
 	while (*haystack != '\0')
 	{
-		/* Initializing the pointers */
-		sub = haystack;
-		check = needle;
+		bhaystack = haystack;
+		pneedle = needle;
 
-		/* Checking and return the char occured */
-		while (*check != '\0' && *haystack == *check)
+		while (*haystack != '\0' && *pneedle != '\0' && *haystack == *pneedle)
 		{
 			haystack++;
-			check++;
+			pneedle++;
 		}
-
-		/* Check the char pointed to by the pointer n is the null */
-		if (!*check)
-		{
-			return (sub);
-		}
-		haystack++;
+		if (!*pneedle)
+			return (bhaystack);
+		haystack = bhaystack + 1;
 	}
-
-	/* In cas nothing found */
-	return ('\0');
+	return (0);
 }

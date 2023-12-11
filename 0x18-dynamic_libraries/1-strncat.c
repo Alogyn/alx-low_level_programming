@@ -1,42 +1,27 @@
 #include "main.h"
-
-/*
- * Task 1. strncat
- */
-
 /**
-  * _strncat - Beginning/Starting point
-  *
-  * @src: Original string pointer or argument
-  * @dest: Append.v2 string pointer or argument
-  * @n: Byts number used from the string 'src'
-  *
-  * Objectif: Concatenate two strings
-  *
-  * Return: The pointer to dest
-  */
-
+ * _strncat - concatenates two strings,
+ * @dest: destination.
+ * @src: source.
+ * @n: amount of bytes used from src.
+ * Return: the pointer to dest.
+ */
 char *_strncat(char *dest, char *src, int n)
 {
-	/* Append variable declaration */
-	int append = 0;
-	/* String size count variable declaration */
-	int count = 0;
+	int count = 0, count2 = 0;
 
-	/* String size count loop */
-	while (dest[count] != '\0')
+	while (*(dest + count) != '\0')
 	{
 		count++;
 	}
 
-	/* Concatenates two strings */
-	for (; append < n && src[append] != '\0'; append++)
+	while (count2 < n)
 	{
-		dest[append + count] = src[append];
+		*(dest + count) = *(src + count2);
+		if (*(src + count2) == '\0')
+			break;
+		count++;
+		count2++;
 	}
-
-	/* Terminating null byte */
-	dest[append + count] = '\0';
-
 	return (dest);
 }
