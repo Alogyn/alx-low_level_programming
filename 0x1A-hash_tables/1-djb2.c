@@ -3,23 +3,22 @@
 /* Task 1. djb2 */
 
 /**
-  * hash_table_create - Creates a hash table
+  * hash_djb2 - Implements the djb2 hash algorithm
   *
-  * @size: The size of the array
+  * @str: The string to hash
   *
-  * Return: A pointer to the newly created hash table,
-  * or NULL if something went wrong
+  * Return: The hash value
   */
 
 unsigned long int hash_djb2(const unsigned char *str)
 {
-    unsigned long int hash;
-    int c;
+	unsigned long int hash;
+	int c;
 
-    hash = 5381;
-    while ((c = *str++))
-    {
-        hash = ((hash << 5) + hash) + c; /* hash * 33 + c */
-    }
-    return (hash);
+	hash = 5381;
+	while ((c = *str++))
+	{
+		hash = ((hash << 5) + hash) + c; /* hash * 33 + c */
+	}
+	return (hash);
 }
