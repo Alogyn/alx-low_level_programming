@@ -1,5 +1,7 @@
 #include "hash_tables.h"
 
+/* Task 0. >>> ht = {} */
+
 /**
   * hash_table_create - Creates a hash table
   *
