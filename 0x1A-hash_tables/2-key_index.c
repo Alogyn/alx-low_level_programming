@@ -1,5 +1,6 @@
-#include <stdlib.h>
 #include "hash_tables.h"
+
+/* Task 2. key -> index */
 
 /**
   * key_index - Gives the index of a key in a hash table
