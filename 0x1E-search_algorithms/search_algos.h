@@ -53,7 +53,9 @@ int interpolation_search(int *array, size_t size, int value);
 int exponential_search(int *array, size_t size, int value);
 /* Task 11 (Advanced) */
 int advanced_binary(int *array, size_t size, int value);
+/* Task 12 (Advanced) */
 listint_t *jump_list(listint_t *list, size_t size, int value);
+/* Task 13 (Advanced) */
 skiplist_t *linear_skip(skiplist_t *list, int value);
 
 #endif
