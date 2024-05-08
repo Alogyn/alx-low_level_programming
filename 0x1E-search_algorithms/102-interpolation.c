@@ -7,7 +7,6 @@
   * @array: Input array
   * @size: Size of the array
   * @value: Value to search in
-  *
   * Return: Index of the number
   */
 
